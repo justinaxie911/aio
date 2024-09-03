@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:ns2="http://schemas.android.com/apk/res-auto">
+	
+	<style name="DarkAppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.App.MaterialAlertDialog</item>
+		<item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/textColorSecondary</item>
+        <item name="android:textColorSecondary">@color/textColorSecondary</item>
+		<item name="preferenceTheme">@style/AppPreference</item>
+		<item name="alertDialogTheme">@style/AppAlertDialog</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="buttonTint">@color/colorAccent</item>
+		<item name="android:navigationBarColor" tools:targetApi="21">@color/colorPrimaryDark</item>
+	</style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" >
+        <item name="android:textColor">@color/gray</item>
+
+    </style>
+    <style name="ThemeOverlay.PopupTheme" parent="Theme.AppCompat.Light" >
+        <item name="android:colorBackground">@color/colorPrimaryDark</item>
+        <item name="android:textColor">@color/blanco</item>
+
+    </style>
+
+    <style name="ThemeOverlay.App.MaterialAlertDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="colorPrimary">@color/blanco</item>
+        <item name="android:windowBackground">@color/targeta</item>
+        <item name="colorSecondary">@color/blanco</item>
+        <item name="android:textColorPrimary">@color/textColorSecondary</item>
+        <item name="android:textColorSecondary">@color/textColorSecondary</item>
+    </style>
+    <style name="AppAlertDialog"
+        parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/targeta</item>
+        <item name="android:textColor">@color/blanco</item>
+        <item name="android:textColorHint">@color/colorText</item>
+        <item name="android:windowBackground">@color/targeta</item>
+        <item name="buttonTint">@color/colorText</item>
+    </style>
+
+
+    <style name="AppTheme.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <!-- línea inferior -->
+        <item name="boxStrokeColor">#FFEB3B</item>
+        <!-- el color de relleno, (por defecto es colorOnSurface)-->
+        <item name="boxBackgroundColor">@android:color/transparent</item>
+        <!-- el hint cuando el campo está vacio y sin foco-->
+        <item name="android:textColorHint">#FFEB3B</item>
+        <!-- el hint cuando se convierte en etiqueta flotante-->
+        <item name="hintTextColor">#FFEB3B</item>
+    </style>
+
+
+
+	<style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+
+	<style name="TabTitleTheme" 
+        parent="@android:style/TextAppearance.Widget.TabWidget">
+        <item name="android:textSize">5.0dip</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffffffff</item>
+       <item name="android:shadowDy">2.0</item>
+        <item name="android:shadowRadius">2.0</item>
+
+    </style>
+
+
+    <style name="TextInputLayoutStyle"
+        parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/blanco</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="errorEnabled">true</item>
+        <item name="hintTextColor">@color/blanco</item>
+    </style>
+
+
+    <style name="DialogCustomTheme" parent="android:Theme.Holo.Dialog.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+
+    <style name="NewDialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+    <style name="outlinedTextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/text_field</item>
+        <item name="hintTextColor">@color/text_field</item>
+        <item name="android:textColorHint">@color/text_field</item>
+    </style>
+
+
+
+
+
+
+
+
+
+        <!-- Other styles . -->
+
+        <style name="AppTheme.EditText1" parent="Widget.AppCompat.EditText">
+            <item name="android:background">@drawable/mi_editar_texto_material</item>
+            <item name="boxStrokeColor">@color/text_field1</item>
+            <!-- el color de relleno, (por defecto es colorOnSurface)-->
+            <item name="boxBackgroundColor">@color/colorPrimaryBackground</item>
+        </style>
+
+
+
+
+
+
+    <style name="My.TextInputLayout.FilledBox.Padding" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="materialThemeOverlay">@color/textColorSecondary</item>
+        <item name="android:textColorHint">@color/blanco</item>
+        <!-- el hint cuando se convierte en etiqueta flotante-->
+        <item name="hintTextColor">@color/textColorSecondary</item>
+    </style>
+
+    <style name="MyThemeOverlayFilledPadding">
+        <item name="editTextStyle">@style/MyTextInputEditText_filledBox_padding</item>
+    </style>
+
+    <style name="MyTextInputEditText_filledBox_padding" parent="@style/Widget.MaterialComponents.TextInputEditText.FilledBox">
+        <!-- left and right padding -->
+        <item name="android:paddingStart" ns2:ignore="NewApi">2dp</item>
+        <item name="android:paddingEnd" ns2:ignore="NewApi">2dp</item>
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingRight">2dp</item>
+
+        <!-- top and bottom padding -->
+        <item name="android:paddingTop">28dp</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <style name="AppTheme.EditText" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@drawable/mi_editar_texto_material</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="boxStrokeColor">?attr/colorPrimary</item>
+        <item name="android:paddingBottom">0dp</item>
+    </style>
+
+
+
+
+
+    <style name="AppTheme.TextInputLayout1" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+
+        <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar.PrimarySurface</item>
+        <item name="android:textSize">13dp</item>
+        <!-- línea inferior activado -->
+        <item name="boxStrokeColor">@color/text_field1</item>
+        <!-- el color de relleno, (por defecto es colorOnSurface)-->
+        <item name="boxBackgroundColor">@color/colorPrimaryBackground</item>
+        <!-- el hint cuando el campo está vacio y sin foco-->
+        <item name="android:textColorHint">#ffffff</item>
+        <!-- el hint cuando se convierte en etiqueta flotante-->
+        <item name="hintTextColor">#ffffff</item>
+        <item name="editTextBackground">@drawable/abc_edit_text_material</item>
+
+        <!-- top and bottom padding -->
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+    </style>
+
+
+
+
+
+
+
+
+
+    <style name="outlinedTextInputLayout1" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/text_field1</item>
+        <item name="hintTextColor">@color/text_field1</item>
+        <item name="android:textColorHint">@color/text_field1</item>
+    </style>
+
+
+
+
+
+    <style name="FondoDialog" parent="android:Theme.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="LoginTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/text_field</item>
+    </style>
+
+
+    <style name="ToolbarTitleTheme" 
+        parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">12.0dip</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ff0000</item>
+        <item name="android:shadowDy">2.0</item>
+        <item name="android:shadowRadius">2.0</item>
+
+    </style>
+
+
+
+
+    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:fontFamily">@font/good</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:drawable">@drawable/ic_launcher</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="ToolbarSubtitleTheme"
+        parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+        <item name="android:textSize">10.0dip</item>
+        <item name="android:textColor">#fff000</item>
+        <item name="android:shadowDy">1.0</item>
+        <item name="android:shadowRadius">1.0</item>
+
+    </style>
+	<style name="AppPreference"
+        parent="PreferenceThemeOverlay">
+        <item name="android:cacheColorHint">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+    <!-- Toolbar theme -->
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <!-- android:textColorPrimary is the color of the title text in the Toolbar  -->
+        <item name="android:textColorPrimary">#ffffffff</item>
+        <item name="android:textSize">10.0dip</item>
+        <!-- actionMenuTextColor is the color of the text of action (menu) items  -->
+        <item name="actionMenuTextColor">@android:color/holo_green_light</item>
+        <!-- Tints the input fields like checkboxes and text fields -->
+        <item name="colorAccent">#ffffff</item>
+        <!-- Applies to views in their normal state. -->
+        <item name="colorControlNormal">#ffffff</item>
+        <!-- Applies to views in their activated state (i.e checked or switches) -->
+        <item name="colorControlActivated">#ffffff</item>
+        <!-- Applied to framework control highlights (i.e ripples or list selectors) -->
+        <item name="colorControlHighlight">#ffffff</item>
+
+        <!-- Enable these below if you want clicking icons to trigger a ripple effect -->
+        <!-- 
+        <item name="selectableItemBackground">?android:selectableItemBackground</item>
+        <item name="selectableItemBackgroundBorderless">?android:selectableItemBackground</item> 
+        -->
+    </style>
+	</resources>

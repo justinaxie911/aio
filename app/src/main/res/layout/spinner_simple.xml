@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Este es el elemento que sale en un spinner; es decir, en la lista
+(no es el que se selecciona, es el que sale en la lista)
+-->
+<CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    style="?android:attr/spinnerDropDownItemStyle"
+    android:layout_width="fill_parent"
+    android:layout_height="40dp"
+    android:background="@color/normalColor"
+    android:ellipsize="marquee"
+    android:singleLine="true"
+    android:textColor="#ffffff" />

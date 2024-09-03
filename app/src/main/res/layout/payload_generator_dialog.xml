@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:padding="?dialogPreferredPadding"
+	android:fillViewport="true">
+
+	<RelativeLayout
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content">
+
+		<LinearLayout
+			android:id="@+id/payload_generator_dialogLinearLayout"
+			android:layout_width="match_parent"
+			android:layout_height="fill_parent"
+			android:orientation="vertical">
+
+			<LinearLayout
+
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginBottom="5dp"
+					android:text="Generador de payload"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					android:textColor="#FFEB3B"
+					android:textStyle="bold"
+					android:textSize="20dp"
+					 />
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Payload"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					android:textColor="#FFEB3B" />
+
+				<RadioGroup
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal">
+
+					<RadioButton
+						android:id="@+id/rNormal"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:text="Normal"
+						android:textColor="#ffffff"
+						app:buttonTint="@drawable/checkbox_filter_tint" />
+
+					<RadioButton
+						android:id="@+id/rSplit"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:text="Split"
+						android:textColor="#ffffff"
+						app:buttonTint="@drawable/checkbox_filter_tint" />
+
+					<RadioButton
+						android:id="@+id/rDirect"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:text="Direct"
+						android:textColor="#ffffff"
+						app:buttonTint="@drawable/checkbox_filter_tint" />
+
+				</RadioGroup>
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal">
+
+					<CheckBox
+						android:id="@+id/cbRotate"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_gravity="center"
+						android:layout_weight="1.0"
+						android:text="Rotate"
+						android:textColor="#ffffff"
+						app:buttonTint="@drawable/checkbox_filter_tint" />
+
+					<Spinner
+						android:id="@+id/split_spin"
+						android:backgroundTint="#ffffff"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0" />
+
+				</LinearLayout>
+
+				<com.google.android.material.textfield.TextInputLayout
+					android:id="@+id/editTextHint"
+					style="@style/outlinedTextInputLayout"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content">
+
+					<com.google.android.material.textfield.TextInputEditText
+						android:id="@+id/host"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:ems="10"
+						style="@style/AppTheme.EditText1"
+						android:textColor="#ffffff"
+						android:hint="URL/Host"
+						android:inputType="textMultiLine" />
+
+				</com.google.android.material.textfield.TextInputLayout>
+
+				<LinearLayout
+					android:layout_marginTop="10dp"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal">
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:orientation="vertical">
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="Request Method"
+							android:textAppearance="?android:attr/textAppearanceSmall"
+							android:textColor="#FFEB3B" />
+
+						<Spinner
+							android:id="@+id/request_spin"
+							android:backgroundTint="#ffffff"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content" />
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:orientation="vertical">
+
+						<TextView
+							android:layout_width="wrap_content"
+							android:layout_height="wrap_content"
+							android:text="Injection Method"
+							android:textAppearance="?android:attr/textAppearanceSmall"
+							android:textColor="#FFEB3B" />
+
+						<Spinner
+							android:id="@+id/inject_spin"
+							android:backgroundTint="#ffffff"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content" />
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="10dp"
+					android:text="Query Method"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					android:textColor="#FFEB3B" />
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal">
+
+					<CheckBox
+						android:id="@+id/cbFront"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:text="Front Query"
+						android:textColor="#ffffff"
+						app:buttonTint="@drawable/checkbox_filter_tint" />
+
+					<CheckBox
+						android:id="@+id/cbBack"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:text="Back Query"
+						android:textColor="#ffffff"
+						app:buttonTint="@drawable/checkbox_filter_tint" />
+
+				</LinearLayout>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="10dp"
+					android:text="Extra Header"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					android:textColor="#FFEB3B" />
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal">
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:orientation="vertical">
+
+						<CheckBox
+							android:id="@+id/cbOnline"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:text="Online Host"
+							android:textColor="#ffffff"
+							app:buttonTint="@drawable/checkbox_filter_tint" />
+
+						<CheckBox
+							android:id="@+id/cbReverse"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="10dp"
+							android:text="Reverse Proxy"
+							android:textColor="#ffffff"
+							app:buttonTint="@drawable/checkbox_filter_tint" />
+
+						<CheckBox
+							android:id="@+id/cbUser"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="10dp"
+							android:text="User Agent"
+							android:textColor="#ffffff"
+							app:buttonTint="@drawable/checkbox_filter_tint" />
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:orientation="vertical">
+
+						<CheckBox
+							android:id="@+id/cbForward"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:text="Forward Host"
+							android:textColor="#ffffff"
+							app:buttonTint="@drawable/checkbox_filter_tint" />
+
+						<CheckBox
+							android:id="@+id/cbKeep"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="10dp"
+							android:text="Keep Alive"
+							android:textColor="#ffffff"
+							app:buttonTint="@drawable/checkbox_filter_tint" />
+
+						<CheckBox
+							android:id="@+id/cbReferer"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_marginTop="10dp"
+							android:text="Referer"
+							android:textColor="#ffffff"
+							app:buttonTint="@drawable/checkbox_filter_tint" />
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="10dp"
+					android:text="Extra"
+					android:textAppearance="?android:attr/textAppearanceSmall"
+					android:textColor="#FFEB3B" />
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="horizontal">
+
+					<CheckBox
+						android:id="@+id/cbRaw"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:text="Raw"
+						android:textColor="#ffffff"
+						app:buttonTint="@drawable/checkbox_filter_tint" />
+
+					<CheckBox
+						android:id="@+id/cbDual"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_weight="1.0"
+						android:text="Dual Connect"
+						android:textColor="#ffffff"
+						app:buttonTint="@drawable/checkbox_filter_tint" />
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+
+
+		</LinearLayout>
+
+	</RelativeLayout>
+
+</ScrollView>
+

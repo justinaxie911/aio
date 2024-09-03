@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:background="@color/targeta"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+		
+        <CheckBox
+            android:id="@+id/pall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bloquear Todos"
+            android:textColor="#ffffff"
+            app:buttonTint="@drawable/checkbox_filter_tint" />
+			
+		<CheckBox
+
+            android:id="@+id/ppayload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bloquear Payload + Proxy"
+            android:textColor="#ffffff"
+            app:buttonTint="@drawable/checkbox_filter_tint" />
+			
+        <CheckBox
+            android:id="@+id/pproxy"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bloquear Proxy"
+            android:textColor="#ffffff"
+            app:buttonTint="@drawable/checkbox_filter_tint" />
+			
+        <CheckBox
+            android:id="@+id/psni"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bloquear SNI"
+            android:textColor="#ffffff"
+            app:buttonTint="@drawable/checkbox_filter_tint"/>
+			
+        <CheckBox
+            android:id="@+id/pserver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bloquear Servidor SSH"
+            android:textColor="#ffffff"
+            app:buttonTint="@drawable/checkbox_filter_tint"/>
+			
+        <CheckBox
+            android:id="@+id/pport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ssh_port"
+            android:visibility="gone"
+            android:textColor="#ffffff"
+            app:buttonTint="@drawable/checkbox_filter_tint"/>
+			
+        <CheckBox
+            android:id="@+id/puser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/auth_username"
+            android:visibility="gone"
+            android:textColor="#ffffff"
+            app:buttonTint="@drawable/checkbox_filter_tint"/>
+			
+        <CheckBox
+            android:id="@+id/pass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/password"
+            android:visibility="gone"
+            android:textColor="#ffffff"
+            app:buttonTint="@drawable/checkbox_filter_tint"/>
+			
+    </LinearLayout>
+	
+</com.google.android.material.card.MaterialCardView>

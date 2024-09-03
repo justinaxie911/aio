@@ -1,0 +1,415 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryBackground"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        
+        
+      <LinearLayout
+
+            android:id="@+id/activity_mainLinearLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="Operador: "
+                    android:textColor="@color/gray1" />
+
+                <TextView
+                    android:id="@+id/MDevzOperator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Operator"
+                    android:textColor="@color/gray1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/MDevzIP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:text="IP"
+                        android:textColor="@color/gray1" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <EditText
+                style="@style/outlinedTextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="12dp"
+                android:layout_marginVertical="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="0dp"
+                android:hint="ip:port@usuario:contraseña"
+                android:visibility="gone" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_all"
+                style="@style/My.TextInputLayout.FilledBox.Padding"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:hint="ip:port@user:pass"
+                android:textColorHint="@color/blanco"
+                app:boxBackgroundMode="none"
+                app:layout_constraintEnd_toStartOf="@+id/profile_guideline_end"
+                app:layout_constraintStart_toStartOf="@+id/profile_guideline_start"
+                app:layout_constraintTop_toBottomOf="@+id/input_layout_firstname">
+
+                <EditText
+                    android:id="@+id/inputall"
+                    style="@style/AppTheme.EditText1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:textColor="#ffffff"
+                    android:textColorHint="#ffffff"
+                    android:textSize="15dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:orientation="vertical">
+                
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <CheckBox
+                    android:id="@+id/cbusepayload"
+                    android:textColor="#ffffff"
+                    app:buttonTint="@drawable/checkbox_filter_tint"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Use Payload"
+                    android:layout_weight="1"/>
+                <CheckBox
+                    android:id="@+id/cbusessl"
+                    android:textColor="#ffffff"
+                    app:buttonTint="@drawable/checkbox_filter_tint"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="SSL"
+                    android:layout_weight="1"/>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <CheckBox
+                    android:id="@+id/cbenabledns"
+                    android:textColor="#ffffff"
+                    app:buttonTint="@drawable/checkbox_filter_tint"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Enable DNS"
+                    android:layout_weight="1"/>
+                <CheckBox
+                    android:id="@+id/cbslowdns"
+                    android:textColor="#ffffff"
+                    app:buttonTint="@drawable/checkbox_filter_tint"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="SlowDNS"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <CheckBox
+                    android:id="@+id/cbautoreplace"
+                    android:textColor="#ffffff"
+                    app:buttonTint="@drawable/checkbox_filter_tint"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Auto Replace"
+                    android:layout_weight="1"/>
+                <CheckBox
+                    android:id="@+id/cbwakelock"
+                    android:textColor="#ffffff"
+                    app:buttonTint="@drawable/checkbox_filter_tint"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="WakeLock"
+                    android:layout_weight="1"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/todossh"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/connection_cardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/targeta"
+                    android:visibility="gone"
+                    app:cardCornerRadius="3dp">
+                    <include layout="@layout/connection_layout" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/tunnelCardView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"
+                    android:background="@drawable/targeta"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="3dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_margin="10dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/mode"
+                            app:tint="#ffffff" />
+
+                        <TextView
+                            android:id="@+id/activitymainTextView1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_weight="1.0"
+                            android:singleLine="true"
+                            android:textColor="#ffffff" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_arrow"
+                            app:tint="#ffffff" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/escondido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@id/adView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <LinearLayout
+                android:id="@+id/jointelegram"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/targeta"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                app:cardCornerRadius="3dp"
+                app:contentPadding="10dp">
+
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/joingrup"
+                    app:tint="#ffffff" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:text="Unete al grupo de telegram"
+                    android:textColor="#ffffff" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/activity_starterButtonMain"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="65dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:clickable="true"
+                android:text="CONNECT"
+                android:textColor="#ffffff"
+                app:backgroundTint="?attr/colorPrimary"
+                app:cornerRadius="3dp"
+                app:strokeColor="#FFEB3B"/>
+
+
+
+
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adBannerMainView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginTop="20dp"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/bannerad" />
+
+
+
+          <LinearLayout
+              android:id="@+id/activitymainCardView1"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="15dp"
+              android:layout_marginTop="10dp"
+              android:layout_marginRight="15dp"
+              android:background="#00000000"
+              android:gravity="center"
+              android:padding="10dp"
+              app:cardCornerRadius="3dp"
+              app:contentPadding="10dp">
+
+              <TextView
+                  android:id="@+id/activity_mainMensagemConfigTextView"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="center"
+                  android:autoLink="web"
+                  android:textColor="#ffffff" />
+
+          </LinearLayout>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+    
+    <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/fabMenu"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="end|bottom"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            app:menu_colorNormal="@color/blue1"
+            app:menu_colorPressed="@color/cardcolor">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/saveconfig"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="clickSaveconfig"
+                android:src="@drawable/ic_saveonfig"
+                app:fab_colorNormal="@color/cardcolor"
+                app:fab_colorPressed="@color/cardcolor"
+                app:fab_label="Guardar Config"
+                app:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/copenconfig"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="clickOpenconfig"
+                android:src="@drawable/ic_openconfig"
+                app:fab_colorNormal="@color/cardcolor"
+                app:fab_colorPressed="@color/cardcolor"
+                app:fab_label="Abrir Config Local"
+                app:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/cloudconfig"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:onClick="clickCloudconfig"
+                android:src="@drawable/ic_cloudconfig"
+                android:tint="@color/blue"
+                app:fab_colorNormal="@color/cardcolor"
+                app:fab_colorPressed="@color/cardcolor"
+                app:fab_label="Abrir Config Online"
+                app:fab_size="mini" />
+
+
+        </com.github.clans.fab.FloatingActionMenu>
+
+</RelativeLayout>

@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:background="@color/colorPrimaryBackground"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:fitsSystemWindows="true">
+
+	<include
+		layout="@layout/toolbar_main"/>
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<LinearLayout
+			android:orientation="vertical"
+			android:padding="10dip"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+
+			<LinearLayout
+				android:layout_width="fill_parent"
+				android:background="@drawable/targeta"
+				android:layout_height="wrap_content"
+				app:cardCornerRadius="2.0dip"
+				app:cardElevation="2.0dip"
+				app:cardUseCompatPadding="true">
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:paddingTop="10dip"
+					android:paddingBottom="10dip"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content">
+
+					<LinearLayout
+						android:gravity="center_vertical"
+						android:orientation="horizontal"
+						android:paddingRight="5dp"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="10dip"
+						android:layout_marginBottom="10dip"
+						android:minHeight="50dp"
+						android:paddingLeft="5dp">
+
+						<View
+							android:layout_width="15dp"
+							android:layout_height="wrap_content"/>
+
+						<ImageView
+							android:layout_width="50dp"
+							android:layout_height="50dp"
+							android:src="@drawable/ic_launcher"/>
+
+						<View
+							android:layout_width="15dp"
+							android:layout_height="wrap_content"/>
+
+						<LinearLayout
+							android:orientation="vertical"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content">
+
+
+
+							<LinearLayout
+								android:orientation="horizontal"
+								android:layout_width="fill_parent"
+								android:layout_height="wrap_content">
+							<TextView
+								android:textAppearance="@style/TextAppearance.AppCompat.Title"
+								android:textStyle="bold"
+								android:textColor="#FFEB3B"
+								android:fontFamily="@font/good"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:text="CO"/>
+
+								<TextView
+									android:textAppearance="@style/TextAppearance.AppCompat.Title"
+									android:textStyle="bold"
+									android:textColor="#ffffff"
+
+									android:textSize="13dp"
+									android:fontFamily="@font/good"
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"
+									android:text="Servers"/>
+							</LinearLayout>
+							<TextView
+								android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+								android:textColor="#ff999999"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:autoLink="web"
+								android:text="  "/>
+
+						</LinearLayout>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:gravity="center_vertical"
+						android:orientation="horizontal"
+						android:paddingLeft="5dp"
+						android:paddingRight="5dp"
+						android:clickable="true"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:minHeight="50dp">
+
+						<View
+							android:layout_width="20dp"
+							android:layout_height="wrap_content"/>
+
+						<ImageButton
+							android:background="@android:color/transparent"
+							android:layout_width="40dp"
+							android:layout_height="40dp"
+							app:srcCompat="@drawable/ic_info"
+							app:tint="#ffffff" />
+
+						<View
+							android:layout_width="20dp"
+							android:layout_height="wrap_content"/>
+
+						<LinearLayout
+							android:orientation="vertical"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content">
+
+							<TextView
+								android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+								android:layout_width="wrap_content"
+								android:textColor="#ffffff"
+								android:layout_height="wrap_content"
+								android:text="Versión"/>
+							<LinearLayout
+								android:orientation="horizontal"
+								android:layout_width="fill_parent"
+								android:layout_height="wrap_content">
+								<TextView
+									android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+									android:textColor="#ff999999"
+									android:text="App Version:  "
+									android:layout_width="wrap_content"
+									android:layout_height="wrap_content"/>
+							<TextView
+								android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+								android:textColor="#ff999999"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:id="@+id/appVersion"/>
+							</LinearLayout>
+						</LinearLayout>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:id="@+id/changelog"
+						android:gravity="center_vertical"
+						android:orientation="horizontal"
+						android:background="?selectableItemBackground"
+						android:paddingLeft="5dp"
+						android:paddingRight="5dp"
+						android:clickable="true"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:minHeight="50dp">
+
+						<View
+							android:layout_width="20dp"
+							android:layout_height="wrap_content"/>
+
+						<ImageButton
+							android:background="@android:color/transparent"
+							android:layout_width="40dp"
+							android:layout_height="40dp"
+							app:srcCompat="@drawable/ic_autorenew_black_24dp"
+							app:tint="#ffffff" />
+
+						<View
+							android:layout_width="20dp"
+							android:layout_height="wrap_content"/>
+
+						<TextView
+							android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+							android:layout_width="wrap_content"
+							android:textColor="#ffffff"
+							android:layout_height="wrap_content"
+							android:text="acerca de"/>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:id="@+id/license"
+						android:gravity="center_vertical"
+						android:orientation="horizontal"
+						android:background="?selectableItemBackground"
+						android:paddingLeft="5dp"
+						android:paddingRight="5dp"
+						android:clickable="true"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:visibility="gone"
+						android:minHeight="50dp">
+
+						<View
+							android:layout_width="20dp"
+							android:layout_height="wrap_content"/>
+
+						<ImageButton
+							android:background="@android:color/transparent"
+							android:layout_width="40dp"
+							android:layout_height="40dp"
+							app:srcCompat="@drawable/ic_book"
+							app:tint="#ffffff" />
+
+						<View
+							android:layout_width="20dp"
+							android:layout_height="wrap_content"/>
+
+						<TextView
+							android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+							android:layout_width="wrap_content"
+							android:textColor="#ffffff"
+							android:layout_height="wrap_content"
+							android:text="Licencia"/>
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+			<View
+				android:layout_width="0.0dip"
+				android:layout_height="10dp"/>
+
+			<LinearLayout
+				android:visibility="visible"
+				android:layout_width="fill_parent"
+				android:background="@drawable/targeta"
+				android:layout_height="wrap_content"
+				app:cardCornerRadius="2.0dip"
+				app:cardElevation="2.0dip"
+				app:cardUseCompatPadding="true">
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:paddingTop="10dp"
+					android:paddingBottom="10dp"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content">
+
+					<TextView
+						android:textColor="#FFEB3B"
+						android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginBottom="10dp"
+						android:text="Gupo telegram"
+						android:textStyle="bold"
+						android:layout_marginLeft="15dp"/>
+
+					<LinearLayout
+						android:id="@+id/developer"
+						android:gravity="center_vertical"
+						android:orientation="horizontal"
+						android:background="?selectableItemBackground"
+						android:paddingLeft="5dp"
+						android:paddingRight="5dp"
+						android:clickable="true"
+						android:visibility="gone"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:minHeight="50dp">
+
+						<View
+							android:layout_width="20dp"
+							android:layout_height="wrap_content"/>
+
+						<ImageButton
+							android:background="@android:color/transparent"
+							android:layout_width="40dp"
+							android:layout_height="40dp"
+							app:srcCompat="@drawable/ic_web"
+							app:tint="#ffffff" />
+
+						<View
+							android:layout_width="20dp"
+							android:layout_height="wrap_content"/>
+
+						<LinearLayout
+							android:orientation="vertical"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content">
+
+							<TextView
+								android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+								android:layout_width="wrap_content"
+								android:textColor="#ffffff"
+								android:layout_height="wrap_content"
+								android:text="Web Dev"/>
+
+							<TextView
+								android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:textColor="#ffffff"
+								android:text="https://t.me/cris1823"/>
+						</LinearLayout>
+
+					</LinearLayout>
+
+					<LinearLayout
+						android:id="@+id/developer2"
+						android:gravity="center_vertical"
+						android:orientation="horizontal"
+						android:background="?selectableItemBackground"
+						android:paddingLeft="5dp"
+						android:paddingRight="5dp"
+						android:clickable="true"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:minHeight="50dp">
+
+						<View
+							android:layout_width="20dp"
+							android:layout_height="wrap_content"/>
+
+						<ImageView
+							android:background="@android:color/transparent"
+							android:layout_width="40dp"
+							android:layout_height="25dp"
+							app:tint="#ffffff"
+							app:srcCompat="@drawable/telegram"/>
+
+						<View
+							android:layout_width="20dp"
+							android:layout_height="wrap_content"/>
+
+						<LinearLayout
+							android:orientation="vertical"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content">
+
+							<TextView
+								android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+								android:layout_width="wrap_content"
+								android:textColor="#ffffff"
+								android:layout_height="wrap_content"
+								android:text="Grupo Dev"/>
+
+							<TextView
+								android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+								android:layout_width="wrap_content"
+								android:layout_height="wrap_content"
+								android:textColor="#ffffff"
+								android:text=" @elcrischat"/>
+						</LinearLayout>
+
+					</LinearLayout>
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+			<View
+				android:layout_width="0.0dip"
+				android:layout_height="10dp"/>
+
+			<LinearLayout
+				android:visibility="visible"
+				android:background="@drawable/targeta"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				app:cardCornerRadius="2.0dip"
+				app:cardElevation="2.0dip"
+				app:cardUseCompatPadding="true">
+
+				<LinearLayout
+					android:orientation="vertical"
+					android:paddingTop="10dp"
+					android:paddingBottom="10dp"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content">
+
+					<TextView
+						android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textColor="#FFEB3B"
+						android:layout_marginBottom="10dp"
+						android:text="Contacto Dev"
+						android:textStyle="bold"
+						android:layout_marginLeft="15dp"/>
+
+					<LinearLayout
+						android:id="@+id/developer3"
+						android:gravity="center_vertical"
+						android:orientation="horizontal"
+						android:background="?selectableItemBackground"
+						android:paddingLeft="5dp"
+						android:paddingRight="5dp"
+						android:clickable="true"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:minHeight="50dp">
+
+						<View
+							android:layout_width="20dp"
+							android:layout_height="wrap_content"/>
+
+						<ImageButton
+							android:background="@android:color/transparent"
+							android:layout_width="40dp"
+							android:layout_height="40dp"
+							app:tint="#ffffff"
+							app:srcCompat="@drawable/ic_person"/>
+
+						<View
+							android:layout_width="20dp"
+							android:layout_height="wrap_content"/>
+
+						<LinearLayout
+							android:orientation="vertical"
+							android:layout_width="fill_parent"
+							android:layout_height="wrap_content">
+
+							<TextView
+								android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+								android:layout_width="wrap_content"
+								android:textColor="#ffffff"
+								android:layout_height="wrap_content"
+								android:text=" 𝔼𝕃 ℂℝ𝕀𝕊⚡️ "/>
+
+							<TextView
+								android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+								android:layout_width="wrap_content"
+								android:textColor="#ffffff"
+								android:layout_height="wrap_content"
+								android:autoLink="web"
+								android:text=" @Crisis1823"/>
+
+						</LinearLayout>
+
+					</LinearLayout>
+
+
+
+
+
+
+				</LinearLayout>
+
+			</LinearLayout>
+
+			<com.google.android.gms.ads.AdView
+				xmlns:ads="http://schemas.android.com/apk/res-auto"
+				android:id="@+id/adBannerMainView2"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				ads:adSize="SMART_BANNER"
+				ads:adUnitId="@string/mconfig4"
+				android:layout_marginTop="8dp"/>
+
+			<View
+				android:layout_width="0.0dip"
+				android:layout_height="15dp"/>
+
+		</LinearLayout>
+
+	</ScrollView>
+
+</LinearLayout>
+

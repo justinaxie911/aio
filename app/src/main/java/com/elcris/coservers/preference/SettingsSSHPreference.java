@@ -1,0 +1,180 @@
+package com.elcris.coservers.preference;
+
+import androidx.preference.PreferenceFragmentCompat;
+import android.os.Bundle;
+
+import androidx.preference.Preference;
+import androidx.preference.EditTextPreference;
+
+import android.content.SharedPreferences;
+import android.content.Intent;
+
+import com.elcris.coservers.R;
+import com.elcris.coservers.logger.SkStatus;
+import com.elcris.coservers.config.SettingsConstants;
+import com.elcris.coservers.config.Settings;
+import com.elcris.coservers.logger.ConnectionStatus;
+import android.os.Handler;
+import android.util.Log;
+
+public class SettingsSSHPreference extends PreferenceFragmentCompat
+implements SettingsConstants, SkStatus.StateListener
+{
+	private static final String TAG = SettingsSSHPreference.class.getSimpleName();
+
+	private Handler mHandler;
+	private Settings mConfig;
+	private SharedPreferences mSecurePrefs;
+	private SharedPreferences mInsecurePrefs;
+
+	protected String[] listEdit_keysProteger = {
+		SERVIDOR_KEY,
+		SERVIDOR_PORTA_KEY,
+		USUARIO_KEY,
+		SENHA_KEY
+	};
+	protected String Usuario = "SERVIDOR_KEY";
+	protected String Pass = "SENHA_KEY";
+	protected String Server = "SERVIDOR_KEY";
+	protected String Port = "SERVIDOR_PORTA_KEY";
+
+	@Override
+	public void onCreate(Bundle savedInstanceState)
+	{
+		super.onCreate(savedInstanceState);
+
+		mHandler = new Handler();
+		mConfig = new Settings(getContext());
+
+		mInsecurePrefs = getPreferenceManager()
+			.getDefaultSharedPreferences(getContext());
+		mSecurePrefs = mConfig.getPrefsPrivate();
+	}
+
+	@Override
+    public void onCreatePreferences(Bundle bundle, String s)
+	{
+        // Load the Preferences from the XML file
+        setPreferencesFromResource(R.xml.sshtunnel_preferences, s);
+
+		// update views
+		getPreferenceScreen().setEnabled(!SkStatus.isTunnelActive());
+	}
+
+	@Override
+	public void onResume()
+	{
+		super.onResume();
+
+		SkStatus.addStateListener(this);
+	}
+
+	@Override
+	public void onDestroy()
+	{
+		super.onDestroy();
+
+		SkStatus.removeStateListener(this);
+	}
+
+	@Override
+	public void updateState(String state, String logMessage, int localizedResId, ConnectionStatus level, Intent intent)
+	{
+		mHandler.post(new Runnable() {
+				@Override
+				public void run() {
+					getPreferenceScreen().setEnabled(!SkStatus.isTunnelActive());
+				}
+			});
+	}
+
+	@Override
+    public void onStart() {
+        super.onStart();
+		
+		SharedPreferences prefs = mConfig.getPrefsPrivate();
+
+		for (String key : listEdit_keysProteger) {
+			if (mSecurePrefs.contains(key)) {
+				((EditTextPreference)findPreference(key))
+					.setText(mSecurePrefs.getString(key, null));
+			}
+
+			if (mSecurePrefs.getBoolean(Settings.CONFIG_PROTEGER_USUARIO, false)) {
+				if ((key.equals(USUARIO_KEY))) {
+					continue;
+				}
+
+				Preference pref = findPreference(USUARIO_KEY);
+
+				pref.setEnabled(false);
+				pref.setSummary(R.string.blocked);
+			}
+			
+			if (mSecurePrefs.getBoolean(Settings.CONFIG_PROTEGER_CONTRASENA, false)) {
+				if ((key.equals(SENHA_KEY)) && mSecurePrefs.getBoolean(Settings.CONFIG_INPUT_PASSWORD_KEY, false)) {
+					continue;
+				}
+				
+				Preference pref = findPreference(SENHA_KEY);
+				pref.setEnabled(false);
+				pref.setSummary(R.string.blocked);
+			}
+			
+			if (mSecurePrefs.getBoolean(Settings.CONFIG_PROTEGER_SERVER, false)) {
+				if ((key).equals(SERVIDOR_KEY)) {
+					continue;
+				}
+				
+				Preference pref = findPreference(SERVIDOR_KEY);
+				pref.setEnabled(false);
+				pref.setSummary(R.string.blocked);
+			}
+			
+			if (mSecurePrefs.getBoolean(Settings.CONFIG_PROTEGER_PORT, false)) {
+				if (key.equals(SERVIDOR_PORTA_KEY)) {
+					continue;
+				}
+				
+				Preference pref = findPreference(SERVIDOR_PORTA_KEY);
+				pref.setEnabled(false);
+				pref.setSummary(R.string.blocked);
+			}
+		}
+
+		String key = Settings.PORTA_LOCAL_KEY;
+		if (mSecurePrefs.contains(key)) {
+			((EditTextPreference)findPreference(key))
+				.setText(mSecurePrefs.getString(key, null));
+		}
+    }
+
+	@Override
+    public void onStop() {
+        super.onStop();
+
+        //because the standard PreferenceActivity deals with unencrpyted prefs, we get them and replace with encrypted version when the activity is stopped
+        final SharedPreferences.Editor insecureEditor = mInsecurePrefs.edit();
+        final SharedPreferences.Editor secureEditor = mSecurePrefs.edit();
+
+		for (String key : listEdit_keysProteger) {
+			if (mInsecurePrefs.contains(key)) {
+				Log.d(TAG, "match found for " + key + " adding encrypted copy to secure prefs");
+				//add the enc versions to the secure prefs
+				secureEditor.putString(key, mInsecurePrefs.getString(key, null));
+				//remove entry from the default/insecure prefs
+				insecureEditor.remove(key);
+			}
+		}
+
+        String key = Settings.PORTA_LOCAL_KEY;
+        if (mInsecurePrefs.contains(key)) {
+            Log.d(TAG, "match found for " + key + " adding encrypted copy to secure prefs");
+            secureEditor.putString(key, mInsecurePrefs.getString(key, null));
+            insecureEditor.remove(key);
+        }
+
+		insecureEditor.commit();
+        secureEditor.commit();
+    }
+}

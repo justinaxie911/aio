@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:aapt="http://schemas.android.com/aapt" 
+	android:orientation="vertical" 
+	android:layout_width="match_parent" 
+	android:layout_height="match_parent">
+	
+    <com.google.android.material.appbar.AppBarLayout 
+		android:layout_width="match_parent" 
+		android:layout_height="wrap_content">
+		
+        <androidx.appcompat.widget.Toolbar 
+			android:id="@+id/toolbar_main1"
+			android:layout_width="match_parent" 
+			android:layout_height="?attr/actionBarSize"
+			app:titleTextAppearance="@style/Toolbar.TitleText"
+			app:popupTheme="@style/AppTheme.PopupOverlay"
+			app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+			
+    </com.google.android.material.appbar.AppBarLayout>
+	
+    <ScrollView
+		android:layout_width="match_parent"
+		android:background="@color/colorPrimaryBackground"
+		android:layout_height="match_parent">
+		
+        <LinearLayout 
+			android:orientation="vertical" 
+			android:padding="12dp"
+
+			android:layout_width="match_parent" 
+			android:layout_height="match_parent">
+			
+            <RelativeLayout
+				android:background="@drawable/criss"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content" 
+				android:layout_marginTop="16dp" 
+				android:layout_marginBottom="16dp" 
+				android:layout_marginVertical="16dp">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="15dp"
+					android:layout_marginTop="15dp"
+					android:layout_marginEnd="15dp"
+					android:layout_marginBottom="15dp"
+					android:orientation="vertical">
+
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="Tipo de tunnel seleccionado"
+						android:textAppearance="?android:attr/textAppearanceSmall"
+						android:textColor="#ffffff"
+						android:textStyle="bold" />
+
+					<TextView
+						android:id="@+id/tunneltypeTextView1"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:ellipsize="marquee"
+						android:focusable="true"
+						android:focusableInTouchMode="true"
+						android:marqueeRepeatLimit="marquee_forever"
+						android:scrollHorizontally="true"
+						android:singleLine="true"
+						android:textColor="#fffafafa" />
+
+				</LinearLayout>
+				
+            </RelativeLayout>
+			
+            <LinearLayout
+				android:layout_width="match_parent" 
+				android:layout_height="wrap_content"
+				android:background="@drawable/targeta"
+				android:layout_marginBottom="10dp" 
+				app:cardCornerRadius="2dp">
+				
+                <LinearLayout 
+					android:orientation="vertical" 
+					android:padding="10dp" 
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content">
+					
+                    <TextView 
+						android:textStyle="bold" 
+						android:layout_width="match_parent" 
+						android:layout_height="wrap_content" 
+						android:layout_marginLeft="5dp"
+						android:textColor="#ffffff"
+						android:layout_marginBottom="5dp" 
+						android:text="Tipo de Tunnel"
+						android:maxLines="1"/>
+						
+                    <RelativeLayout 
+						android:orientation="horizontal" 
+						android:layout_width="match_parent" 
+						android:layout_height="wrap_content">
+						
+                        <LinearLayout 
+							android:orientation="horizontal" 
+							android:layout_width="match_parent" 
+							android:layout_height="wrap_content">
+							
+                            <RadioButton 
+								android:id="@+id/btnSSH"
+
+								android:layout_width="0dp" 
+								android:layout_height="wrap_content" 
+								android:checked="true"
+								app:buttonTint="@drawable/checkbox_filter_tint"
+								android:textColor="#ffffff"
+								android:text="Secure Shell (SSH)"
+								android:layout_weight="1"/>
+								
+                            <RadioButton 
+								android:id="@+id/btnSlowDNS" 
+								android:layout_width="0dp"
+								android:textColor="#ffffff"
+								app:buttonTint="@drawable/checkbox_filter_tint"
+								android:layout_height="wrap_content" 
+								android:text="Slow DNS" 
+								android:layout_weight="1"/>
+								
+                        </LinearLayout>
+						
+                    </RelativeLayout>
+					
+                </LinearLayout>
+				
+            </LinearLayout>
+			
+            <LinearLayout
+				android:layout_width="match_parent"
+				android:background="@drawable/targeta"
+				android:layout_height="wrap_content" 
+				android:layout_marginBottom="10dp" 
+				app:cardCornerRadius="2dp">
+				
+                <LinearLayout 
+					android:orientation="vertical" 
+					android:padding="10dp"
+					android:layout_width="match_parent" 
+					android:layout_height="wrap_content">
+					
+                    <TextView 
+						android:textStyle="bold" 
+						android:layout_width="match_parent" 
+						android:layout_height="wrap_content" 
+						android:layout_marginLeft="5dp" 
+						android:layout_marginBottom="5dp" 
+						android:text="Conectar desde"
+						android:textColor="#ffffff"
+						android:maxLines="1"/>
+						
+                    <LinearLayout 
+						android:orientation="vertical" 
+						android:layout_width="match_parent" 
+						android:layout_height="wrap_content">
+						
+                        <LinearLayout 
+							android:orientation="horizontal" 
+							android:layout_width="match_parent" 
+							android:layout_height="wrap_content">
+							
+                            <RadioButton 
+								android:id="@+id/btnDirect"
+								android:textColor="#ffffff"
+								app:buttonTint="@drawable/checkbox_filter_tint"
+								android:layout_width="0dp" 
+								android:layout_height="wrap_content" 
+								android:text="None (Direct)"
+								android:layout_weight="1"/>
+								
+                            <RadioButton 
+								android:id="@+id/btnHTTP" 
+								android:layout_width="0dp"
+								android:textColor="#ffffff"
+								app:buttonTint="@drawable/checkbox_filter_tint"
+								android:layout_height="wrap_content" 
+								android:text="HTTP Proxy" 
+								android:layout_weight="1"/>
+								
+                        </LinearLayout>
+						
+                        <LinearLayout 
+							android:orientation="horizontal" 
+							android:layout_width="match_parent" 
+							android:layout_height="wrap_content">
+							
+                            <RadioButton 
+								android:id="@+id/btnSSL" 
+								android:layout_width="0dp" 
+								android:layout_height="wrap_content" 
+								android:text="SSL/TLS"
+								android:textColor="#ffffff"
+								app:buttonTint="@drawable/checkbox_filter_tint"
+								android:layout_weight="1"/>
+								
+                            <RadioButton 
+								android:id="@+id/btnSSLHTTP" 
+								android:layout_width="0dp" 
+								android:layout_height="wrap_content" 
+								android:text="SSL/TLS Proxy"
+								android:textColor="#ffffff"
+								app:buttonTint="@drawable/checkbox_filter_tint"
+								android:layout_weight="1"/>
+								
+                        </LinearLayout>
+						
+						<LinearLayout 
+							android:orientation="horizontal" 
+							android:layout_width="match_parent" 
+							android:layout_height="wrap_content">
+							
+                            <RadioButton 
+                                android:id="@+id/btnSSLPay" 
+								android:layout_width="0dp" 
+								android:layout_height="wrap_content" 
+								android:text="SSL + Payload"
+								android:textColor="#ffffff"
+								app:buttonTint="@drawable/checkbox_filter_tint"
+								android:layout_weight="1"/>
+								
+                            <RadioButton 
+								android:visibility="invisible"
+								android:id="@+id/btnSSLHTTP0" 
+								android:layout_width="0dp" 
+								android:layout_height="wrap_content" 
+								android:text="SSL/TLS Proxy" 
+								android:layout_weight="1"/>
+								
+                        </LinearLayout>
+						
+                    </LinearLayout>
+					
+                </LinearLayout>
+				
+            </LinearLayout>
+			
+            <LinearLayout
+				android:layout_width="match_parent"
+				android:background="@drawable/targeta"
+				android:layout_height="wrap_content" 
+				app:cardCornerRadius="2dp">
+				
+                <LinearLayout 
+					android:orientation="vertical" 
+					android:padding="10dp" 
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content">
+					
+                    <TextView 
+						android:textStyle="bold" 
+						android:layout_width="match_parent" 
+						android:layout_height="wrap_content" 
+						android:layout_marginLeft="5dp" 
+						android:layout_marginBottom="5dp" 
+						android:text="Opciones"
+						android:textColor="#ffffff"
+						android:maxLines="1"/>
+						
+                    <LinearLayout 
+						android:orientation="horizontal" 
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content">
+						
+                        <Switch
+							android:id="@+id/customPayload" 
+							android:layout_width="match_parent"
+							app:buttonTint="@drawable/checkbox_filter_tint"
+							android:layout_height="wrap_content"/>
+
+
+						<TextView
+							android:layout_marginStart="5dp"
+							android:layout_width="match_parent"
+							android:textColor="#ffffff"
+							app:buttonTint="@drawable/checkbox_filter_tint"
+							android:layout_height="wrap_content"
+							android:text="Payload personalizado"/>
+							
+                    </LinearLayout>
+					
+                </LinearLayout>
+				
+            </LinearLayout>
+			
+
+
+
+
+			<Button
+				android:id="@+id/saveButton"
+				style="?attr/materialButtonOutlinedStyle"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginStart="0dp"
+				android:layout_marginTop="8dp"
+				android:layout_marginEnd="0dp"
+				android:clickable="true"
+				android:padding="14dp"
+				android:text="GUARDAR"
+				android:textColor="#ffffff"
+				app:backgroundTint="?attr/colorPrimary"
+				app:cornerRadius="5dp"
+				app:strokeColor="#FFEB3B" />
+
+
+
+
+
+				
+        </LinearLayout>
+		
+    </ScrollView>
+	
+</LinearLayout>

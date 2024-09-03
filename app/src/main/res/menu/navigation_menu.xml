@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	
+	<group android:id="@+id/group_divider">
+		<item
+            android:id="@+id/payload_generator"
+            android:icon="@drawable/ic_developer_mode_white_24dp"
+            android:title="@string/pay_gen"/>
+
+	</group>
+
+
+
+
+	<group android:id="@+id/group_divider1">
+
+		<item android:title=" Ajustes">
+
+		<menu>
+
+    	<item
+       		android:id="@+id/miPhoneConfg"
+			android:icon="@drawable/ic_wifi_tethering_white_24dp"
+        	android:title="@string/network_mobile"/>
+
+    	<item android:id="@+id/miSettings"
+        	android:icon="@drawable/ic_settings"
+        	android:title="@string/settings"/>
+		</menu>
+
+		</item>
+
+	</group>
+
+
+
+
+
+
+	<group android:id="@+id/group_divider2">
+
+		<item android:title=" Utilidades">
+
+			<menu>
+
+		<item android:id="@+id/miPayload"
+			android:visible="true"
+			android:icon="@drawable/ic_payload"
+			android:title="Payload"/>
+
+
+		<item android:id="@+id/miSNI"
+			android:visible="true"
+			android:icon="@drawable/ic_sni"
+			android:title="SNI"/>
+
+			</menu>
+
+		</item>
+
+	</group>
+
+
+
+
+
+
+
+	<group android:id="@+id/group_divider3">
+
+		<item android:title=" Herramientas">
+
+			<menu>
+
+
+				<item android:id="@+id/miDNS"
+					android:visible="true"
+					android:icon="@drawable/ic_dns"
+					android:title="Custom DNS"/>
+
+
+				<item android:id="@+id/miUDPGW"
+					android:visible="true"
+					android:icon="@drawable/ic_udpgw"
+					android:title="UDPGW SSH"/>
+
+				<item android:id="@+id/hardware"
+					android:visible="true"
+					android:icon="@drawable/ic_huella"
+					android:title="HWID"/>
+
+
+
+
+				<item android:id="@+id/importonline"
+					android:visible="true"
+					android:icon="@drawable/ic_clouddescargar"
+					android:title="Importar Online"/>
+
+
+				<item android:id="@+id/sharewifi"
+					android:visible="true"
+					android:icon="@drawable/ic_sharewifi"
+					android:title="Wi-Fi Shared"/>
+
+				<item android:id="@+id/speedtest"
+					android:visible="true"
+					android:icon="@drawable/ic_speedtest"
+					android:title="Speed Test"/>
+
+
+			</menu>
+
+		</item>
+
+	</group>
+
+
+	<group>
+		<item
+			android:visible="false"
+			android:id="@+id/miSettingsSSH"
+			android:icon="@drawable/ic_connected"
+			android:title="@string/settings_ssh"/>
+		
+		<item android:visible="false"
+			android:id="@+id/authentication"
+			android:icon="@drawable/ic_person_white_24dp"
+			android:title="@string/user_authentication"/>
+		
+	</group>
+
+
+
+
+
+
+
+	<group android:id="@+id/group_divider5">
+
+
+
+		<item android:title=" Social">
+
+		<menu>
+
+		<!--<item android:id="@+id/updateApp"
+			android:icon="@drawable/ic_download"
+			android:title="Check update"/>-->
+		
+		<item android:id="@+id/miAvaliarPlaystore"
+			android:icon="@drawable/ic_rate_review_white_24dp"
+			android:title="@string/feedback"/>
+		
+		<item android:id="@+id/tele_group"
+			android:icon="@drawable/ic_plane"
+			android:title="@string/telegram"/>
+
+		<item android:id="@+id/compartirapp"
+			android:icon="@drawable/ic_shared"
+			android:title="Compartir App"/>
+
+		
+		<item android:id="@+id/miAbout"
+			android:icon="@drawable/ic_cinformacion"
+			android:title="Información"/>
+
+
+		</menu>
+
+		</item>
+
+	</group>
+
+
+
+	
+	<group>
+
+		<!--<item android:id="@+id/sshgratis"
+			android:icon="@drawable/ic_web"
+			android:title="Free Servers"/>-->
+
+	</group>
+	
+	
+	
+</menu>

@@ -1,0 +1,40 @@
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:layout_height="wrap_content"
+	android:layout_width="match_parent"
+	xmlns:tools="http://schemas.android.com/tools"
+	app:layout_behavior="@string/appbar_scrolling_view_behavior"
+	app:elevation="0dp"
+	app:theme="@style/AppTheme.AppBarOverlay">
+
+	<androidx.appcompat.widget.Toolbar
+		android:id="@+id/toolbar_main"
+		android:background="@color/colorBtn"
+		android:visibility="visible"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior"
+		android:layout_width="match_parent"
+		app:titleTextColor="#ffffff"
+		app:titleTextAppearance="@style/Toolbar.TitleText"
+		android:layout_height="wrap_content"
+		android:minHeight="?attr/actionBarSize"
+		app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+
+
+
+
+	<androidx.appcompat.widget.Toolbar
+		android:id="@+id/toolbar_main1"
+		android:visibility="gone"
+        android:background="@color/colorBtn"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:fontFamily="@font/good"
+		android:minHeight="?attr/actionBarSize"
+		app:titleTextAppearance="@style/Toolbar.TitleText"
+		app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+
+
+
+</com.google.android.material.appbar.AppBarLayout>

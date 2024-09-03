@@ -1,0 +1,64 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+	<PreferenceCategory>
+
+
+		<com.elcris.coservers.view.SummaryEditTextPreference
+			app:iconSpaceReserved="false"
+			app:singleLineTitle="false"
+			android:title="Configuracion SlowDNS"/>
+
+		<com.elcris.coservers.view.SummaryEditTextPreference
+            android:key="chaveKey"
+			app:iconSpaceReserved="false"
+            android:title="Llave publica"
+            android:summary="Llave publica de SlowDNS del servidor"
+            android:dialogMessage=""
+			android:singleLine="false"
+			android:dialogLayout="@layout/pref_dialog_edittext_fix" />
+
+		<com.elcris.coservers.view.SummaryEditTextPreference
+            android:key="serverNameKey"
+			app:iconSpaceReserved="false"
+            android:title="Nombre del servidor"
+            android:summary="Escribir Nombre de dominio DNS"
+            android:dialogMessage=""
+			android:singleLine="true"
+			android:dialogLayout="@layout/pref_dialog_edittext_fix" />
+		
+		<com.elcris.coservers.view.SummaryEditTextPreference
+            android:key="dnsKey"
+			app:iconSpaceReserved="false"
+            android:title="DNS"
+			android:summary="@string/summary_dns"
+			android:singleLine="true"
+			android:defaultValue="8.8.8.8"
+			android:dialogLayout="@layout/pref_dialog_number" />
+
+
+		<com.elcris.coservers.view.SummaryEditTextPreference
+			android:key="sshUser"
+			app:isPreferenceVisible="false"
+			android:title="Usuario"
+			android:summary="none"
+			app:iconSpaceReserved="false"
+			android:dialogMessage=""
+			android:singleLine="true"
+			android:dialogLayout="@layout/pref_dialog_edittext_fix" />
+
+		<com.elcris.coservers.view.PasswordEditTextPreference
+			android:key="sshPass"
+			android:title="Contraseña"
+			app:isPreferenceVisible="false"
+			android:summary="none"
+			app:iconSpaceReserved="false"
+			android:dialogMessage=""
+			android:singleLine="true"
+			android:dialogLayout="@layout/pref_dialog_edittext_fix" />
+
+	</PreferenceCategory>
+
+
+
+
+</PreferenceScreen>

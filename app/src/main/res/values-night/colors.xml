@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+	<color name="colorPrimary">#1e252b</color> //color toolbar
+    <color name="colorPrimaryDark">#1e252b</color> // color barra notificaciones
+    <color name="colorAccent">#FFEB3B</color>
+    <color name="colorAccent2">#ffffff</color>
+    <color name="cardcolor">#353b48</color>
+	<color name="blanco">#ffffff</color>
+	<color name="warningColor">@color/colorPrimaryBackground</color>
+	<color name="successColor">#1e252b</color>
+	<color name="normalColor">#454f62</color>
+	<color name="errorColor">@color/colorPrimaryBackground</color>
+	<color name="infoColor">#FFEB3B</color>
+	<color name="targeta">@color/colorPrimary</color>
+
+
+
+
+    <color name="colorBtn">#1e252b</color> //color toolbar // targetas
+	<color name="contentBackground">#353b48</color>
+	<color name="button_pressed">@color/colorPrimaryDark</color>
+    <color name="button_normal">@color/colorPrimary</color>
+	<color name="textColorPrimary">#ffffff</color>
+	<color name="textColorSecondary">#ffffff</color>
+	<color name="colorTextEnabled">#333333</color>
+	<color name="colorTextDisabled">#DEDEDE</color>
+
+	<color name="colorText">#ffffff</color>
+	<color name="colorPrimaryBackground">#191f24</color> //color background
+	<color name="colorSecondaryBackground">#1e252b</color>
+	<color name="gray_light">#DEDEDE</color>
+	<color name="blue">#ffffff</color>
+	<color name="blue_light">#FFEB3B</color>
+	<color name="blue1">#FFEB3B</color>
+	<color name="gray">#515151</color>
+	<color name="gray1">#B9FFEB3B</color>
+	<color name="black_light">#333333</color>
+	<color name="white">#ffffff</color>
+	<color name="red">#FD1C0D</color>
+	<color name="yellow">#EEFD00</color>
+	<color name="green">#454f62</color>
+	<color name="cris2">#BF373837</color>
+
+</resources>

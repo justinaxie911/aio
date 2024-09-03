@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/btnprendido" android:state_checked="true" android:onClick="onButtonStartTapped"/>
+    <item android:drawable="@drawable/btnapagado" android:state_checked="false" android:onClick="onButtonStopTapped"/>
+</selector>

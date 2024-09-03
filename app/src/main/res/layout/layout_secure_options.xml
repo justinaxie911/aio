@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView 
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+	
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:background="@color/targeta"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+		
+        <CheckBox
+            android:id="@+id/activity_config_exportBlockRootCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/check_block_root" 
+            android:textColor="#ffffff"
+            app:buttonTint="@drawable/checkbox_filter_tint"/>
+			
+        <CheckBox
+            android:id="@+id/activity_config_exportHdwidLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Inicio de Sesion Usando HWID" 
+            android:textColor="#ffffff"
+            app:buttonTint="@drawable/checkbox_filter_tint"/>
+			
+        <CheckBox
+            android:id="@+id/activity_config_exportOnlyDataBlock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bloquear Solo Datos Moviles" 
+            android:textColor="#ffffff"
+            app:buttonTint="@drawable/checkbox_filter_tint"/>
+			
+        <CheckBox
+            android:id="@+id/activity_config_exportOnlyPlayStore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bloquear Solo Instalacion de Play Store" 
+            android:textColor="#ffffff"
+            app:buttonTint="@drawable/checkbox_filter_tint"/>
+			
+        <CheckBox
+            android:id="@+id/activity_config_exportOperadorCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/operator_checkbox_tittle" 
+            android:textColor="#ffffff"
+            app:buttonTint="@drawable/checkbox_filter_tint"/>
+			
+        <CheckBox
+            android:id="@+id/activity_config_exportValidadeCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/check_date_valid" 
+            android:textColor="#ffffff"
+            app:buttonTint="@drawable/checkbox_filter_tint"/>
+			
+        <CheckBox
+            android:id="@+id/activity_config_exportBlockHwid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/block_hwid_checkbox_tittle" 
+            android:textColor="#ffffff"
+            app:buttonTint="@drawable/checkbox_filter_tint"/>
+			
+    </LinearLayout>
+	
+</com.google.android.material.card.MaterialCardView>

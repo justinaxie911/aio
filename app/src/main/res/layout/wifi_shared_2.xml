@@ -1,0 +1,829 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:background="@color/colorPrimaryBackground"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="55dp"
+        android:background="@color/colorBtn"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/atras"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:padding="15dp"
+            android:src="@drawable/back_icon"
+            app:tint="#ffffff" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:fontFamily="@font/good"
+            android:gravity="left|center"
+            android:text="Wi-fi Shared"
+            android:textColor="#ffffff"
+            android:textSize="17dp" />
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="fill_parent"
+        android:layout_marginBottom="0dp"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/sinwifi"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:src="@drawable/wifiapagado" />
+
+        <ImageView
+            android:id="@+id/wifimedio"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:src="@drawable/wifiiniciando"
+            android:visibility="visible" />
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/conwifi"
+            android:gravity="center"
+            android:src="@drawable/wifiiniciado"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp" />
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_marginBottom="20dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="WIFI OFF"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#595959"
+            android:textStyle="bold|normal" />
+
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="SHARED OFF"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#595959"
+            android:textStyle="bold|normal" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="TODO OK"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="@color/infoColor"
+            android:textStyle="bold|normal" />
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <LinearLayout
+
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="0dp"
+        android:layout_weight="1"
+        android:background="#00000000"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:background="@drawable/targeta"
+            android:orientation="vertical"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/gris1"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/tv_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="El Wi-Fi Shared esta DESACTIVADO."
+                    android:textColor="#ffffff"
+                    android:textSize="12dp"
+                    android:visibility="visible" />
+
+
+                <ImageView
+                    android:id="@+id/buttonwifi"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:src="@drawable/ic_settings"
+                    android:textSize="12dp"
+                    android:visibility="visible"
+                    app:cornerRadius="5dp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <ScrollView
+                        android:layout_width="fill_parent"
+                        android:layout_height="200dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/textViewLog"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="Red"
+                            android:textColor="#ffffff"
+                            android:textSize="18sp" />
+
+                    </ScrollView>
+
+
+                    <EditText
+                        android:id="@+id/editPassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:hint="Contraseña"
+                        android:inputType="textPersonName"
+                        android:textColorHint="#ffffff"
+                        android:visibility="gone" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:text="SSID: "
+                            android:textColor="#ffffff"
+                            android:textStyle="bold|normal" />
+
+                        <TextView
+                            android:id="@+id/namered"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:autoLink="web"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:text="Desactivada"
+                            android:textColor="@color/infoColor"
+                            android:textIsSelectable="true"
+                            android:textStyle="bold|normal" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:text="PASS: "
+                            android:textColor="#ffffff"
+                            android:textStyle="bold|normal" />
+
+                        <TextView
+                            android:id="@+id/passred"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:autoLink="web"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:text="Desactivada"
+                            android:textColor="@color/infoColor"
+                            android:textIsSelectable="true"
+                            android:textStyle="bold|normal" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:text="IP Proxy: "
+                            android:textColor="#ffffff"
+                            android:textStyle="bold|normal" />
+
+                        <TextView
+                            android:id="@+id/ipproxy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:autoLink="web"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:text="esperando.."
+                            android:textColor="@color/infoColor"
+                            android:textIsSelectable="true"
+                            android:textStyle="bold|normal"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/MDevzIP"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:autoLink="web"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:text="esperando.."
+                            android:textColor="@color/infoColor"
+                            android:textIsSelectable="true"
+                            android:textStyle="bold|normal"
+                            android:visibility="visible" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:text="Puerto Proxy: "
+                            android:textColor="#ffffff"
+                            android:textStyle="bold|normal" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="9999"
+                            android:textColor="@color/infoColor"
+                            android:textIsSelectable="true"
+                            android:textStyle="bold|normal" />
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/textViewDevices"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="vertical"
+                        android:textSize="18sp"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/buttonUpdate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:onClick="onButtonUpdateTapped"
+                        android:text="Update"
+                        android:visibility="gone" />
+
+
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_margin="20dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="150dp">
+
+
+            <RadioGroup
+                android:visibility="gone"
+                android:id="@+id/radioGroup"
+                android:layout_width="247dp"
+                android:layout_height="39dp"
+                android:layout_marginTop="20dp"
+                android:checkedButton="@id/radioButton2G"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.548"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editPassword">
+
+                <RadioButton
+                    android:id="@+id/radioButton2G"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/infoColor"
+                    android:text="2.4GHz"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/radioButton5G"
+                    android:layout_width="125dp"
+                    android:layout_height="36dp"
+                    android:textColor="@color/infoColor"
+                    android:text="5GHz"
+                    android:textSize="20sp" />
+
+            </RadioGroup>
+
+
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+
+
+                android:visibility="gone"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ToggleButton
+                    android:id="@+id/buttonStart"
+                    android:layout_width="147dp"
+                    android:layout_height="58dp"
+                    android:onClick="onButtonStartTapped"
+                    android:text="Start" />
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/buttonStop"
+                    android:layout_width="147dp"
+                    android:layout_height="58dp"
+                    android:onClick="onButtonStopTapped"
+                    android:text="Stop" />
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+
+            <ScrollView
+                android:layout_marginBottom="10dp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:layout_weight="1"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="vertical"
+                        android:text="Instrucciones de Uso"
+                        android:textSize="18sp" />
+                    <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="10dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="vertical"
+                        android:text="Paso 1:  Tener Prendido el Wi-fi"
+                        android:textColor="@color/blanco"
+                        android:textSize="12sp" />
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="5dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="vertical"
+                        android:text="Paso 2:  Oprimir boton Activar Shared"
+                        android:textColor="@color/blanco"
+                        android:textSize="12sp" />
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="5dp"/>
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="vertical"
+                        android:text="Paso 3:  Conectar la app VPN"
+                        android:textColor="@color/blanco"
+                        android:textSize="12sp" />
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="5dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Paso 4: Este Wifi direct Crea su propia red y contraseña de red, para conectarlo ve al dispositivo al que le vas a compartir y conectate a la red entregada por esta opción, luego edita los ajustes de la red, añade el proxy y el puerto del proxy para que te de intewrnet y listo, ya podras disfrutar"
+                        android:textColor="@color/blanco"
+                        android:textSize="12dp" />
+
+
+                </LinearLayout>
+
+
+            </ScrollView>
+
+
+
+
+
+            <LinearLayout
+
+                android:layout_width="fill_parent"
+                android:layout_height="100dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="-20dp"
+                android:background="@drawable/targeta"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+
+
+
+
+                <ToggleButton
+                    android:id="@+id/cb_enable1"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gris1"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:text="ToggleButton"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:textSize="12dp"
+                    app:rippleColor="#00BFA5"
+                    android:textOff="ACTIVAR SHARED"
+                    android:textOn="DESACTIVAR SHARED"/>
+
+
+
+
+                <Button
+                    android:id="@+id/restart"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/gris1"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="Reiniciar Wi-Fi"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="12dp"
+                    android:visibility="visible"
+                    app:cornerRadius="5dp" />
+
+
+
+
+
+
+
+
+
+                <Button
+                    android:visibility="gone"
+                    android:id="@+id/WiFiTetherButton"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/gris1"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="Activar anclaje"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="12dp"
+                    app:cornerRadius="5dp"
+                    app:rippleColor="#00BFA5" />
+
+            </LinearLayout>
+
+
+            <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adBannerSecondView"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:visibility="visible"
+                ads:adSize="SMART_BANNER"
+                ads:adUnitId="ca-app-pub-6741116462771721/6882526328">
+
+            </com.google.android.gms.ads.AdView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Connected Devices"
+            android:textSize="24sp"
+             />
+
+        <Button
+            android:layout_width="147dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="28dp"
+            android:onClick="onButtonStopTapped"
+            android:text="Stop"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <EditText
+            android:id="@+id/editSSID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="myhotspot"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.631"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="111dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="20dp"
+            android:text="Password"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/editPassword"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="66dp"
+            android:layout_height="44dp"
+            android:layout_marginTop="40dp"
+            android:text="SSID"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toStartOf="@+id/editSSID"
+            app:layout_constraintHorizontal_bias="0.985"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <Button
+            android:layout_width="147dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="28dp"
+            android:onClick="onButtonStartTapped"
+            android:text="Start"
+            app:layout_constraintEnd_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+
+
+
+
+
+
+
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="21dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Log"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+    </LinearLayout>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android" 
+	xmlns:app="http://schemas.android.com/apk/res-auto" 
+	xmlns:aapt="http://schemas.android.com/aapt" 
+	android:orientation="vertical" 
+	android:layout_width="match_parent" 
+	android:layout_height="wrap_content">
+	
+    <!--<RelativeLayout 
+		android:orientation="horizontal" 
+		android:id="@+id/dnsLayout" 
+		android:layout_width="match_parent" 
+		android:layout_height="wrap_content">
+		
+        <com.google.android.material.textfield.TextInputLayout 
+			android:id="@+id/dnsLayoutBox" 
+			android:layout_width="match_parent" 
+			android:layout_height="wrap_content" 
+			android:layout_marginLeft="12dp" 
+			android:layout_marginTop="12dp" 
+			android:layout_marginRight="12dp" 
+			android:layout_marginBottom="12dp" 
+			android:layout_centerVertical="true" 
+			android:layout_marginHorizontal="12dp" 
+			android:layout_marginVertical="12dp" 
+			style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+			
+            <com.google.android.material.textfield.TextInputEditText 
+				android:id="@+id/dnsEdit" 
+				android:layout_width="match_parent" 
+				android:layout_height="wrap_content" 
+				android:hint="@string/title_dnsserver" 
+				android:singleLine="true" 
+				android:maxLength="30"/>
+				
+        </com.google.android.material.textfield.TextInputLayout>
+		
+        <LinearLayout 
+			android:orientation="vertical" 
+			android:layout_width="28dp" 
+			android:layout_height="28dp" 
+			android:layout_marginRight="12dp" 
+			android:layout_alignRight="@+id/dnsLayoutBox" 
+			android:layout_centerVertical="true">
+			
+            <View 
+				android:layout_width="match_parent" 
+				android:layout_height="5dp"/>
+				
+            <ImageView 
+				android:id="@+id/refresh_dns" 
+				android:background="?android:attr/selectableItemBackgroundBorderless" 
+				android:clickable="true" 
+				android:layout_width="match_parent" 
+				android:layout_height="match_parent" 
+				android:src="@drawable/ic_baseline_refresh_24" 
+				app:tint="@android:color/tertiary_text_light"/>
+				
+        </LinearLayout>
+		
+    </RelativeLayout>-->
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+		android:id="@+id/payloadLayout"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginLeft="12dp"
+		android:layout_marginTop="12dp"
+		android:layout_marginRight="12dp"
+		android:layout_marginBottom="12dp"
+		android:layout_marginHorizontal="12dp"
+		android:layout_marginVertical="12dp"
+		style="@style/outlinedTextInputLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+			android:id="@+id/payloadEdit"
+			android:textColor="#ffffff"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:enabled="false"
+			android:hint="Payload"/>
+
+
+
+
+
+
+	</com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+    <LinearLayout 
+		android:gravity="center" 
+		android:orientation="horizontal" 
+		android:id="@+id/proxyLayout" 
+		android:padding="12dp" 
+		android:visibility="gone"
+		android:layout_width="match_parent" 
+		android:layout_height="wrap_content" 
+		android:foreground="?android:attr/selectableItemBackground">
+		
+        <LinearLayout 
+			android:orientation="vertical" 
+			android:layout_width="match_parent" 
+			android:layout_height="wrap_content" 
+			android:layout_marginLeft="3dp" 
+			android:layout_marginRight="3dp" 
+			android:layout_weight="1" 
+			android:layout_marginHorizontal="3dp">
+			
+            <TextView 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:textColor="#FFEB3B"
+				android:text="Proxy Remoto"/>
+				
+            <TextView 
+				android:id="@+id/proxyText" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content" 
+				android:layout_marginTop="2dp"
+				android:textColor="#ffffff"
+				android:text="@string/squid" 
+				android:singleLine="true"/>
+				
+        </LinearLayout>
+		
+        <ImageView 
+			android:visibility="visible"
+			android:layout_width="25dp" 
+			android:layout_height="25dp"
+			android:src="@drawable/lapiz"
+			app:tint="#ffffff"/>
+			
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+	
+    <LinearLayout 
+		android:focusable="true"
+		android:gravity="center" 
+		android:orientation="horizontal" 
+		android:id="@+id/sslLayout" 
+		android:padding="12dp" 
+		android:visibility="gone"
+		android:layout_width="match_parent" 
+		android:layout_height="wrap_content" 
+		android:foreground="?android:attr/selectableItemBackground">
+		
+        <LinearLayout 
+			android:orientation="vertical" 
+			android:layout_width="match_parent" 
+			android:layout_height="wrap_content" 
+			android:layout_marginLeft="5dp" 
+			android:layout_weight="1">
+			
+            <TextView
+				android:textColor="#FFEB3B"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content" 
+				android:text="Nombre del servidor (SNI)"/>
+				
+            <TextView
+				android:id="@+id/sslText"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content" 
+				android:layout_marginTop="2dp"
+				android:textColor="#ffffff"
+				android:visibility="visible"
+				android:singleLine="true"/>
+
+			<TextView
+				android:id="@+id/sslText1"
+				android:visibility="gone"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="2dp"
+				android:textColor="#ffffff"
+				android:text="Ex: www.facebook.com"
+				android:singleLine="true"/>
+				
+        </LinearLayout>
+		
+        <ImageView 
+			android:visibility="visible"
+			android:layout_width="25dp" 
+			android:layout_height="25dp"
+			android:src="@drawable/lapiz"
+			app:tint="#ffffff"/>
+			
+    </LinearLayout>
+	
+</LinearLayout>

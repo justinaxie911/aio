@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+
+	android:layout_height="wrap_content"
+	android:layout_width="fill_parent"
+	android:background="?attr/selectableItemBackground"
+	android:orientation="vertical">
+
+	<LinearLayout
+		android:id="@+id/ivManagerAdapter_ItemLayout"
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent"
+		android:orientation="horizontal">
+
+		<ImageView
+			android:src="@drawable/libreria"
+			android:layout_height="45dp"
+			android:layout_width="45dp"
+			android:layout_margin="10dp"/>
+		<ImageView
+			android:id="@+id/ivManagerAdapter_ImageIcon"
+			android:layout_height="45dp"
+			android:visibility="gone"
+			android:layout_width="45dp"
+			android:layout_margin="10dp"/>
+		<LinearLayout
+			android:layout_height="fill_parent"
+			android:layout_width="match_parent"
+			android:layout_marginStart="5dp"
+			android:orientation="vertical"
+			android:layout_toEndOf="@id/ivManagerAdapter_ImageIcon"
+			android:layout_centerInParent="true"
+			android:gravity="left|center_vertical"
+			android:id="@+id/listitemmanagerLinearLayout1">
+
+			<TextView
+				android:id="@+id/tvManagerAdapter_FolderName"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:textColor="#ffffff"
+				android:singleLine="true"
+				android:textSize="18sp"/>
+
+			<TextView
+				android:text="Directorios"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:singleLine="true"
+				android:textColor="#ffffff"
+				android:textSize="12dp"/>
+
+
+			<TextView
+				android:id="@+id/tvManagerAdapter_FolderNameDate"
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:singleLine="true"
+				android:visibility="gone"
+				android:textColor="#ffffff"
+				android:textSize="15sp"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+
+
+
+
+	<LinearLayout
+		android:visibility="gone"
+		android:id="@+id/ivManagerAdapter_ItemLayout1"
+		android:layout_height="wrap_content"
+		android:layout_width="fill_parent"
+		android:orientation="horizontal">
+
+		<ImageView
+			android:src="@drawable/libreria"
+			android:layout_height="45dp"
+			android:layout_width="45dp"
+			android:layout_margin="10dp"/>
+		<ImageView
+			android:id="@+id/ivManagerAdapter_ImageIcon1"
+			android:layout_height="45dp"
+			android:visibility="gone"
+			android:layout_width="45dp"
+			android:layout_margin="10dp"/>
+		<LinearLayout
+			android:layout_height="fill_parent"
+			android:layout_width="match_parent"
+			android:layout_marginStart="5dp"
+			android:orientation="vertical"
+			android:layout_toEndOf="@id/ivManagerAdapter_ImageIcon"
+			android:layout_centerInParent="true"
+			android:gravity="left|center_vertical">
+
+			<TextView
+				android:layout_height="wrap_content"
+				android:layout_width="wrap_content"
+				android:textColor="#ffffff"
+				android:text="Cargar Config de la Nube"
+				android:singleLine="true"
+				android:textSize="18sp"/>
+
+
+
+
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>
+
+

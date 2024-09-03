@@ -1,0 +1,37 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+	
+	<item
+        android:id="@+id/miSettings"
+        android:icon="@drawable/ic_settings"
+		app:showAsAction="always"
+        android:title="@string/settings">
+    </item>
+	
+	<item
+		android:visible="false"
+        android:icon="@drawable/ic_config"
+        app:showAsAction="always"
+        android:id="@+id/folder"
+        android:title="@string/config">
+		<menu>
+			<item
+                android:icon="@drawable/ic_file_import"
+                android:id="@+id/miSettingImportar"
+                android:title="@string/settings_export" />
+            <item
+                android:icon="@drawable/ic_file_export"
+                android:id="@+id/miSettingExportar"
+                android:title="@string/settings_import" />
+		</menu>
+    </item>
+	
+	<item
+        android:id="@+id/miLimparConfig"
+        android:title="Limpiar Configuración"/>
+
+	<item
+        android:id="@+id/miExit"
+        android:title="Salir de la app"/>
+	
+</menu>

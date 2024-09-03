@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:aapt="http://schemas.android.com/aapt"
+	xmlns:sweet="http://schemas.android.com/tools"
+	android:orientation="vertical"
+	android:background="@color/colorPrimaryBackground"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	
+    <LinearLayout
+		android:id="@+id/share_wifi" 
+		android:focusable="true" 
+		android:clickable="true"
+		android:background="@drawable/targeta"
+		android:layout_width="match_parent" 
+		android:layout_height="100dp"
+		android:layout_marginTop="12dp" 
+		android:layout_marginRight="10dp" 
+		android:layout_marginHorizontal="10dp">
+		
+        <LinearLayout 
+			android:gravity="center" 
+			android:orientation="horizontal"
+			android:paddingRight="15dp"
+			android:layout_width="match_parent" 
+			android:layout_height="match_parent" >
+
+
+
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:gravity="center"
+				android:layout_width="120dp"
+				android:layout_height="80dp">
+
+				<ImageView
+					android:gravity="center"
+					android:layout_marginStart="10dp"
+					android:src="@drawable/wifi"
+					android:layout_width="80dp"
+					android:layout_height="70dp"
+					app:tint="#ffffff" />
+
+			</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+			
+            <LinearLayout 
+				android:gravity="center_vertical" 
+				android:orientation="vertical"
+				android:layout_marginStart="10dp"
+				android:layout_width="wrap_content" 
+				android:layout_height="100dp">
+				
+                <TextView 
+					android:textSize="18sp" 
+					android:textStyle="bold"
+					android:textColor="#FFEB3B"
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content" 
+					android:text="Compartir Internet"/>
+					
+                <TextView 
+					android:textSize="12sp"
+					android:textColor="#ffffff"
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content" 
+					android:text="Ejecute un servidor proxy para compartir su internet" />
+            </LinearLayout>
+			
+            <ImageView 
+				android:layout_width="25dp" 
+				android:layout_height="25dp"
+				android:layout_marginEnd="10dp"
+				android:src="@drawable/ic_arrow"
+				app:tint="#ffffff" />
+        </LinearLayout>
+		
+    </LinearLayout>
+
+
+
+	<LinearLayout
+		android:id="@+id/speedtest"
+		android:focusable="true"
+		android:clickable="true"
+		android:background="@drawable/targeta"
+		android:layout_width="match_parent"
+		android:layout_height="100dp"
+		android:layout_marginTop="12dp"
+		android:layout_marginRight="10dp"
+		android:layout_marginHorizontal="10dp">
+
+		<LinearLayout
+			android:gravity="center"
+			android:orientation="horizontal"
+			android:paddingRight="15dp"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent" >
+
+
+
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:gravity="center"
+				android:layout_width="120dp"
+				android:layout_height="80dp">
+
+				<ImageView
+					android:gravity="center"
+					android:layout_marginStart="10dp"
+					android:src="@drawable/ic_speedtest"
+					android:layout_width="80dp"
+					android:layout_height="70dp"
+					app:tint="#ffffff" />
+
+			</LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+			<LinearLayout
+				android:gravity="center_vertical"
+				android:orientation="vertical"
+				android:layout_marginStart="10dp"
+				android:layout_width="wrap_content"
+				android:layout_height="100dp">
+
+				<TextView
+					android:textSize="18sp"
+					android:textStyle="bold"
+					android:textColor="#FFEB3B"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Testear Velocidad"/>
+
+				<TextView
+					android:textSize="12sp"
+					android:textColor="#ffffff"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="Ejecute una prueba de velocidad de internet" />
+
+			</LinearLayout>
+
+			<ImageView
+				android:layout_width="25dp"
+				android:layout_height="25dp"
+				android:layout_marginEnd="10dp"
+				android:src="@drawable/ic_arrow"
+				app:tint="#ffffff" />
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+
+
+	
+    <com.google.android.material.card.MaterialCardView 
+        android:visibility="gone"
+		android:id="@+id/host_checker" 
+		android:focusable="true" 
+		android:clickable="true" 
+		android:layout_width="match_parent" 
+		android:layout_height="60dp" 
+		android:layout_marginLeft="10dp" 
+		android:layout_marginTop="10dp" 
+		android:layout_marginRight="10dp" 
+		android:layout_marginHorizontal="10dp">
+		
+        <LinearLayout 
+			android:gravity="center" 
+			android:orientation="horizontal" 
+			android:paddingLeft="15dp" 
+			android:paddingRight="15dp" 
+			android:layout_width="match_parent" 
+			android:layout_height="match_parent" 
+			android:paddingHorizontal="15dp">
+			
+            <LinearLayout 
+				android:gravity="center_vertical" 
+				android:orientation="vertical" 
+				android:layout_width="wrap_content" 
+				android:layout_height="match_parent" 
+				android:layout_weight="1">
+				
+                <TextView 
+					android:textSize="18sp" 
+					android:textStyle="bold" 
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content" 
+					android:text="Host Checker"/>
+					
+                <TextView 
+					android:textSize="12sp" 
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content" 
+					android:text="Verificar Estatus De Host SNI" 
+					android:singleLine="true"/>
+					
+            </LinearLayout>
+			
+            <ImageView 
+				android:layout_width="25dp" 
+				android:layout_height="25dp" 
+				android:src="@drawable/ic_arrow"/>
+				
+        </LinearLayout>
+		
+    </com.google.android.material.card.MaterialCardView>
+	
+    <com.google.android.material.card.MaterialCardView 
+        android:visibility="gone"
+		android:id="@+id/check_ip" 
+		android:focusable="true" 
+		android:clickable="true" 
+		android:layout_width="match_parent" 
+		android:layout_height="60dp" 
+		android:layout_marginLeft="10dp" 
+		android:layout_marginTop="10dp" 
+		android:layout_marginRight="10dp" 
+		android:layout_marginHorizontal="10dp">
+		
+        <LinearLayout 
+			android:gravity="center" 
+			android:orientation="horizontal" 
+			android:paddingLeft="15dp" 
+			android:paddingRight="15dp" 
+			android:layout_width="match_parent" 
+			android:layout_height="match_parent" 
+			android:paddingHorizontal="15dp">
+			
+            <LinearLayout 
+				android:gravity="center_vertical" 
+				android:orientation="vertical" 
+				android:layout_width="wrap_content" 
+				android:layout_height="match_parent" 
+				android:layout_weight="1">
+				
+                <TextView 
+					android:textSize="18sp" 
+					android:textStyle="bold" 
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content" 
+					android:text="Check IP"/>
+					
+                <TextView 
+					android:textSize="12sp" 
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content" 
+					android:text="Verificar Informacion de La IP" 
+					android:singleLine="true"/>
+					
+            </LinearLayout>
+			
+            <ImageView 
+				android:layout_width="25dp" 
+				android:layout_height="25dp" 
+				android:src="@drawable/ic_arrow"/>
+				
+        </LinearLayout>
+		
+    </com.google.android.material.card.MaterialCardView>
+	
+    <!--<com.google.android.material.card.MaterialCardView 
+		android:id="@+id/v2ray_injector" 
+		android:focusable="true" 
+		android:clickable="true" 
+		android:layout_width="match_parent" 
+		android:layout_height="60dp" 
+		android:layout_marginLeft="10dp" 
+		android:layout_marginTop="10dp" 
+		android:layout_marginRight="10dp" 
+		android:layout_marginHorizontal="10dp">
+		
+        <LinearLayout 
+			android:gravity="center" 
+			android:orientation="horizontal" 
+			android:paddingLeft="15dp" 
+			android:paddingRight="15dp" 
+			android:layout_width="match_parent" 
+			android:layout_height="match_parent" 
+			android:paddingHorizontal="15dp">
+			
+            <LinearLayout 
+				android:gravity="center_vertical" 
+				android:orientation="vertical" 
+				android:layout_width="wrap_content" 
+				android:layout_height="match_parent" 
+				android:layout_weight="1">
+				
+                <TextView 
+					android:textSize="18sp" 
+					android:textStyle="bold" 
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content" 
+					android:text="V2Ray Injector"/>
+					
+                <TextView 
+					android:textSize="12sp" 
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content" 
+					android:text="[Ad] v2ray tunneling app. good for gaming" 
+					android:singleLine="true"/>
+					
+            </LinearLayout>
+			
+            <ImageView 
+				android:layout_width="25dp" 
+				android:layout_height="25dp" 
+				android:src="@drawable/ic_arrow"/>
+				
+        </LinearLayout>
+		
+    </com.google.android.material.card.MaterialCardView>-->
+	
+    <!--<com.google.android.material.card.MaterialCardView 
+		android:id="@+id/debug_mode" 
+		android:layout_width="match_parent" 
+		android:layout_height="60dp" 
+		android:layout_marginLeft="10dp" 
+		android:layout_marginTop="10dp" 
+		android:layout_marginRight="10dp" 
+		android:layout_marginHorizontal="10dp">
+		
+        <LinearLayout 
+			android:gravity="center" 
+			android:orientation="horizontal" 
+			android:paddingLeft="15dp" 
+			android:paddingRight="15dp" 
+			android:layout_width="match_parent" 
+			android:layout_height="match_parent" 
+			android:paddingHorizontal="15dp">
+			
+            <LinearLayout 
+				android:gravity="center_vertical" 
+				android:orientation="vertical" 
+				android:layout_width="wrap_content" 
+				android:layout_height="match_parent" 
+				android:layout_weight="1">
+				
+                <TextView 
+					android:textSize="18sp" 
+					android:textStyle="bold" 
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content" 
+					android:text="Debug Mode"/>
+					
+                <TextView 
+					android:textSize="12sp" 
+					android:layout_width="wrap_content" 
+					android:layout_height="wrap_content" 
+					android:text="More detailed info in the log" 
+					android:singleLine="true"/>
+					
+            </LinearLayout>
+			
+            <Switch 
+				android:id="@+id/debug_switch" 
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"/>
+				
+        </LinearLayout>
+		
+    </com.google.android.material.card.MaterialCardView>-->
+	
+</LinearLayout>

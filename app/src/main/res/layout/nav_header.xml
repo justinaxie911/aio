@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:background="@color/colorBtn"
+	android:gravity="center">
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_marginStart="15dp"
+		android:orientation="vertical"
+		android:gravity="bottom">
+
+
+		<ImageView
+			android:layout_marginTop="50dp"
+			android:layout_width="50dp"
+			android:layout_height="60dp"
+			android:src="@drawable/ic_launcher"/>
+
+	<TextView
+        android:id="@+id/autornav"    
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="2023 (c) CRIS DEV. TEAM"
+		android:layout_gravity="start"
+		android:textColor="#FFFFFFFF"
+		android:textStyle="bold"/>
+
+
+		<LinearLayout
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+
+	<TextView
+		android:layout_marginBottom="15dp"
+		android:id="@+id/nav_headerAppVersion"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:layout_gravity="start"
+		android:text="version"
+		android:textStyle="bold"
+		android:textColor="#878686"/>
+
+
+		</LinearLayout>
+	</LinearLayout>
+
+</LinearLayout>
+

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorBtn"
+    android:gravity="center_horizontal"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+
+
+
+
+    <LinearLayout
+
+        android:padding="15dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp">
+
+
+        <LinearLayout
+            android:layout_marginEnd="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/targeta">
+
+
+
+
+
+
+
+            <TextView
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:text="Configuración Exportada:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Payload"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:gravity="end"
+                android:layout_height="fill_parent">
+                <ImageView
+                    android:id="@+id/hadsButton2"
+                    android:src="@drawable/salir"
+                    android:layout_width="15dp"
+                    android:layout_height="fill_parent"/>
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ffffff">
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+    <LinearLayout
+
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
+        >
+
+
+
+
+
+
+
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:textColor="#ffffff"
+                android:text="Utiliza el token o el enlace para importar la configuracion" />
+
+
+
+
+
+
+
+
+
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:textSize="15dp"
+                android:textColor="#0A87FB"
+                android:text="Token: " />
+
+
+
+
+
+            <TextView
+                android:id="@+id/tokencp"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="true"
+                android:text="Token"
+                android:textSize="15dp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"/>
+
+            </LinearLayout>
+            
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:textSize="15dp"
+                android:textColor="#0A87FB"
+                android:text="Enlace: " />
+
+
+
+
+
+            <TextView
+                android:id="@+id/enlacecp"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="true"
+                android:text="Enlace"
+                android:textSize="15dp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"/>
+
+            </LinearLayout>
+
+
+
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:textColor="#ffffff"
+                android:text="Compartele el token o el enlace a la persona que deseas compartir la configuracion.." />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+
+
+
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+
+            <Button
+                android:drawableLeft="@drawable/ic_shared"
+                android:id="@+id/hadsButton1"
+                android:layout_width="wrap_content"
+                app:backgroundTint="@color/blue_light"
+                android:layout_height="wrap_content"
+                android:text="Compartir"
+                android:maxLines="1"
+                android:textColor="#ffffff" />
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

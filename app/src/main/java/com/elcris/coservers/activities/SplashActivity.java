@@ -1,0 +1,26 @@
+package com.elcris.coservers.activities;
+
+import android.content.*;
+import android.content.pm.*;
+import android.os.*;
+import android.view.*;
+
+import com.elcris.coservers.MainActivity;
+import com.elcris.coservers.R;
+
+public class SplashActivity extends BaseActivity implements Runnable {
+    @Override
+    protected void onCreate(Bundle bundle) {
+        super.onCreate(bundle);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        setContentView(R.layout.activity_splash);
+        new Handler().postDelayed(this, 2000);
+    }
+
+    @Override
+    public void run() {
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
+    }
+}

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android" 
+	xmlns:app="http://schemas.android.com/apk/res-auto" 
+	xmlns:aapt="http://schemas.android.com/aapt" 
+	android:orientation="vertical" 
+	android:paddingLeft="15dp" 
+	android:paddingRight="15dp" 
+	android:paddingBottom="18dp" 
+	android:layout_width="match_parent" 
+	android:layout_height="wrap_content">
+	
+    <com.google.android.material.textfield.TextInputLayout 
+		android:id="@+id/box" 
+		android:layout_width="match_parent" 
+		android:layout_height="wrap_content"
+		style="@style/outlinedTextInputLayout">
+		
+        <com.google.android.material.textfield.TextInputEditText
+			android:hint="Nombre del host (Dominio)"
+			android:textColor="#FFEB3B"
+			android:id="@+id/fragment_custom_sni" 
+			android:layout_width="match_parent" 
+			android:layout_height="wrap_content" 
+			android:maxLines="5" 
+			android:ems="9" 
+			android:inputType="text"/>
+			
+    </com.google.android.material.textfield.TextInputLayout>
+	
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:gravity="right"
+		android:layout_marginTop="5dp">
+
+		<Button
+			android:textColor="#ffffff"
+			android:id="@+id/fragment_sni_remoteCancelButton"
+			android:background="@android:color/transparent"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+            android:text="@string/cancel"/>
+
+		<Button
+			android:textColor="#ffffff"
+			android:id="@+id/fragment_sni_remoteSaveButton"
+			android:background="@android:color/transparent"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+            android:text="@string/save"/>
+			   
+	</LinearLayout>
+	
+</LinearLayout>

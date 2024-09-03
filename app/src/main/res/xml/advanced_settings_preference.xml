@@ -1,0 +1,74 @@
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+	<PreferenceCategory>
+
+		<com.elcris.coservers.view.SummaryEditTextPreference
+			app:iconSpaceReserved="false"
+			android:title="Configuraciones Avanzadas"/>
+
+
+		<androidx.preference.SwitchPreferenceCompat
+			android:key="modeDebug"
+			app:iconSpaceReserved="false"
+			android:title="Modo debug"
+			android:summary="Le permite ver información más avanzada en los registros ( 8 Subprocesos )"
+			/>
+
+		<ListPreference
+			app:isPreferenceVisible="false"
+			android:key="numberMaxThreadSocks"
+			app:iconSpaceReserved="false"
+			android:title="Número máximo de subprocesos"
+			android:summary="cuanto mayor sea el número de subprocesos, mayor será el consumo de energía y la velocidad de la conexión en su dispositivo."
+			android:defaultValue="8th"
+			android:entries="@array/pref_maxThreads_option_labels"
+			android:entryValues="@array/pref_maxThreads_option_values"
+			/>
+
+		<androidx.preference.SwitchPreferenceCompat
+			android:key="tetherSubnet"
+			app:iconSpaceReserved="false"
+			android:title="Subred de anclaje (beta)"
+			android:summary="Habilítelo si tiene problemas para compartir sus dispositivos en Internet."/>
+
+	</PreferenceCategory>
+
+
+	<PreferenceCategory>
+
+
+		<com.elcris.coservers.view.SummaryEditTextPreference
+			app:iconSpaceReserved="false"
+			android:title="Filtro de aplicaciones"/>
+
+
+		<androidx.preference.SwitchPreferenceCompat
+			android:key="filterApps"
+			app:iconSpaceReserved="false"
+			android:title="Filtrar aplicaciones"
+			/>
+
+		<androidx.preference.SwitchPreferenceCompat
+			android:key="filterBypassMode"
+			app:iconSpaceReserved="false"
+			android:summary="si está activo, el tráfico de las aplicaciones seleccionadas se enviará al directorio."
+			android:title="Modo Bypass"
+			/>
+
+		<EditTextPreference
+			android:key="filterAppsList"
+			android:title="Filtrar aplicaciones"
+			app:iconSpaceReserved="false"
+			android:summary="Ingrese un nombre de paquete por línea. Para ver el nombre de paquete valla a configuración/aplicaciones seleccione la aplicacion y mire el nombre sera algo asi: ( com.appcompany.app )."
+			android:dialogMessage=""
+			android:singleLine="true"
+			android:dialogLayout="@layout/pref_dialog_edittext_fix"
+			/>
+
+	</PreferenceCategory>
+
+
+</PreferenceScreen>

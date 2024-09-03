@@ -1,0 +1,177 @@
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:key="screenMain">
+
+
+
+
+    <androidx.preference.PreferenceCategory>
+
+
+		<com.elcris.coservers.view.SummaryEditTextPreference
+            android:enabled="false"
+			app:iconSpaceReserved="false"
+			app:singleLineTitle="false"
+			android:title="Túnel"/>
+
+		
+        <androidx.preference.Preference
+			app:isPreferenceVisible="false"
+			android:icon="@drawable/ic_ssh"
+			android:title="@string/settings_ssh_title" 
+			android:key="SSHTunnelSettings" 
+			android:summary="Configurar SSH">
+			
+            <intent 
+				android:targetPackage="com.elcris.coservers"
+				android:action="openSSHScreen" 
+				android:targetClass="com.elcris.coservers.activities.ConfigGeralActivity"/>
+				
+        </androidx.preference.Preference>
+
+
+
+        <androidx.preference.Preference
+			android:icon="@drawable/ic_slowdns" 
+			android:title="DNSTT (DNS)"
+			android:key="DNSTunnelSettings" 
+			android:summary="Configurar SlowDNS">
+			
+            <intent
+				android:targetPackage="com.elcris.coservers"
+				android:action="openDNSScreen" 
+				android:targetClass="com.elcris.coservers.activities.ConfigGeralActivity"/>
+				
+        </androidx.preference.Preference>
+
+
+    </androidx.preference.PreferenceCategory>
+
+
+
+
+
+
+	<PreferenceCategory>
+
+
+		<com.elcris.coservers.view.SummaryEditTextPreference
+            android:enabled="false"
+			app:iconSpaceReserved="false"
+			android:title="General"/>
+
+
+		<CheckBoxPreference
+			app:iconSpaceReserved="false"
+			android:key="udpForward"
+			android:title="Redirigir UDP"
+			android:defaultValue="true"
+			android:summary="si está activo, redirige la solicitud al servidor remoto.." />
+
+		<com.elcris.coservers.view.SummaryEditTextPreference
+			android:key="udpResolver"
+			app:iconSpaceReserved="false"
+			android:title="Puerta UDP (remota)"
+			android:summary="Por defecto (7300)"
+			android:dialogMessage=""
+			android:singleLine="true"
+			android:dialogLayout="@layout/pref_dialog_edittext_fix" />
+
+		<CheckBoxPreference
+			app:iconSpaceReserved="false"
+			android:key="dnsForward"
+            android:defaultValue="true"
+			android:title="Reenviar DNS"
+			android:summary="si está activo, redirige la solicitud al servidor remoto.." />
+
+		<com.elcris.coservers.view.SummaryEditTextPreference
+			app:iconSpaceReserved="false"
+			app:isPreferenceVisible="true"
+            android:key="dnsResolver1"
+            android:title="DNS Primario"
+            android:defaultValue="8.8.8.8"
+			android:dialogLayout="@layout/pref_dialog_edittext_fix" />
+
+        <com.elcris.coservers.view.SummaryEditTextPreference
+            android:key="dnsResolver2"
+			app:isPreferenceVisible="true"
+			app:iconSpaceReserved="false"
+            android:title="DNS Segundario"
+            android:defaultValue="8.8.4.4"
+			android:dialogLayout="@layout/pref_dialog_edittext_fix" />
+
+	</PreferenceCategory>
+
+
+	<PreferenceCategory>
+
+
+
+		<com.elcris.coservers.view.SummaryEditTextPreference
+            android:enabled="false"
+			app:iconSpaceReserved="false"
+			app:singleLineTitle="false"
+			android:title="Otras Configuraciones"/>
+		
+		<com.elcris.coservers.view.SummaryEditTextPreference
+            android:key="pingerSSH"
+			app:iconSpaceReserved="false"
+            android:title="Ping (segundos)"
+			android:maxLength="3"
+			android:singleLine="true"
+			android:dialogLayout="@layout/pref_dialog_number"
+		/>
+
+		<CheckBoxPreference
+			app:isPreferenceVisible="false"
+			app:iconSpaceReserved="false"
+			android:key="autoClearLogs"
+			android:title="Borrar automaticamente el Registro"
+			android:defaultValue="true"
+			android:summary="Si esta activo el registro se borrara automaticamente.."
+			android:singleLine="true"
+		/>
+
+		<CheckBoxPreference
+			app:isPreferenceVisible="false"
+			app:iconSpaceReserved="false"
+			android:key="hideLog"
+			android:title="Esconder el registro al iniciar"
+			android:summary="Si esta activa no se mostrara el registro al iniciar.."
+		/>
+	
+		<ListPreference
+        	android:key="idioma"
+			app:isPreferenceVisible="false"
+			android:defaultValue="default"
+        	android:entries="@array/pref_idioma_option_labels"
+        	android:entryValues="@array/pref_idioma_option_values"
+        	android:title="@string/title_language"
+		/>
+
+
+
+		<Preference
+			app:iconSpaceReserved="false"
+			android:key="screenAdvancedSettings"
+			app:fragment="com.elcris.coservers.preference.SettingsAdvancedPreference"
+			android:summary="entra a configuraciones avanzadas"
+			android:title="Configuraciones avanzadas"/>
+
+
+		<ListPreference
+			app:isPreferenceVisible="false"
+			android:key="modeNight"
+			android:defaultValue="off"
+			android:entries="@array/pref_modoNoturno_option_labels"
+			android:entryValues="@array/pref_modoNoturno_option_values"
+			android:title="Night Mode"
+			/>
+
+
+	</PreferenceCategory>
+
+	
+	
+</PreferenceScreen>

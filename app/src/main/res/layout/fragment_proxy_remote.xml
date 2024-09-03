@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+	xmlns:android="http://schemas.android.com/apk/res/android" 
+	xmlns:app="http://schemas.android.com/apk/res-auto" 
+	xmlns:aapt="http://schemas.android.com/aapt" 
+	android:orientation="vertical" 
+	android:paddingLeft="18dp" 
+	android:paddingRight="18dp" 
+	android:paddingBottom="18dp" 
+	android:layout_width="match_parent" 
+	android:layout_height="wrap_content" 
+	android:paddingHorizontal="18dp">
+	
+    <LinearLayout 
+		android:orientation="horizontal" 
+		android:layout_width="match_parent" 
+		android:layout_height="wrap_content">
+		
+        <com.google.android.material.textfield.TextInputLayout 
+			android:layout_width="match_parent" 
+			android:layout_height="wrap_content" 
+			android:hint="@string/proxy_ip"
+			style="@style/outlinedTextInputLayout"
+			android:layout_weight="1" >
+			
+            <com.google.android.material.textfield.TextInputEditText 
+				android:id="@+id/fragment_proxy_remoteProxyIpEdit" 
+				android:layout_width="match_parent" 
+				android:layout_height="wrap_content" 
+				android:ems="9"
+				android:textColor="#FFEB3B"
+				android:singleLine="true" 
+				android:inputType="text"/>
+				
+        </com.google.android.material.textfield.TextInputLayout>
+		
+        <com.google.android.material.textfield.TextInputLayout 
+			android:layout_width="match_parent" 
+			android:layout_height="wrap_content" 
+			android:layout_marginLeft="6dp" 
+			android:hint="@string/proxy_port"
+			android:layout_weight="2"
+			style="@style/outlinedTextInputLayout">
+			
+            <com.google.android.material.textfield.TextInputEditText 
+				android:id="@+id/fragment_proxy_remoteProxyPortaEdit" 
+				android:layout_width="match_parent" 
+				android:layout_height="wrap_content" 
+				android:ems="4"
+				android:textColor="#FFEB3B"
+				android:singleLine="true" 
+				android:inputType="number"/>
+				
+        </com.google.android.material.textfield.TextInputLayout>
+		
+    </LinearLayout>
+	
+    <CheckBox
+		android:visibility="gone"
+		android:enabled="false"
+		android:id="@+id/proxy_auth"
+		android:textColor="#ffffff"
+		app:buttonTint="@drawable/checkbox_filter_tint"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" 
+		android:layout_marginTop="8dp" 
+		android:layout_marginBottom="5dp" 
+		android:text="@string/proxy_auth"/>
+	
+	<LinearLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:orientation="horizontal"
+		android:gravity="right"
+		android:layout_marginTop="5dp">
+
+		<Button
+
+			android:textColor="#ffffff"
+			android:id="@+id/fragment_proxy_remoteCancelButton"
+			android:background="@android:color/transparent"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+            android:text="@string/cancel"/>
+
+		<Button
+			android:textColor="#ffffff"
+			android:id="@+id/fragment_proxy_remoteSaveButton"
+			android:background="@android:color/transparent"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+            android:text="@string/save"/>
+			   
+	</LinearLayout>
+	
+</LinearLayout>

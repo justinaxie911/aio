@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:aapt="http://schemas.android.com/aapt"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:id="@+id/drawerLayoutMain"
+	android:fitsSystemWindows="true"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+	
+    <LinearLayout 
+		android:orientation="vertical" 
+		android:layout_width="match_parent" 
+		android:layout_height="match_parent">
+		
+        <com.google.android.material.appbar.AppBarLayout 
+			android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar" 
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<androidx.appcompat.widget.Toolbar
+				android:id="@+id/toolbar_main1"
+                android:background="@color/colorBtn"
+				android:layout_width="fill_parent"
+				android:layout_height="?attr/actionBarSize"
+				app:titleTextAppearance="@style/Toolbar.TitleText"
+				app:popupTheme="@style/ThemeOverlay.PopupTheme">
+
+
+
+				<LinearLayout
+					android:layout_width="fill_parent"
+					android:orientation="horizontal"
+					android:layout_height="wrap_content"
+					android:gravity="bottom">
+
+					<TextView
+						android:id="@+id/nameapp"
+						android:layout_width="wrap_content"
+						android:layout_height="fill_parent"
+						android:text="@string/name1"
+						android:gravity="bottom"
+						android:textColor="#FFEB3B"
+						android:textStyle="bold"
+						android:layout_gravity="left"
+						tools:ignore="MissingPrefix"
+						android:textSize="18sp"/>
+					<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="fill_parent"
+						android:gravity="bottom"
+						android:text="@string/name2"
+						android:layout_gravity="left"
+						tools:ignore="MissingPrefix"
+						android:textColor="#ffffff"
+						android:textSize="18sp"/>
+
+					<TextView
+						android:layout_width="fill_parent"
+						android:layout_height="fill_parent"
+						android:layout_weight="1"
+						android:gravity="bottom"
+						android:text=""
+						tools:ignore="MissingPrefix"
+						android:textColor="#ffffff"
+						android:textSize="15sp"/>
+
+				</LinearLayout>
+
+
+
+
+			</androidx.appcompat.widget.Toolbar>
+
+
+
+
+				
+            <com.google.android.material.tabs.TabLayout
+                android:theme="@style/ToolbarTheme"
+                android:id="@+id/tablayout"
+                android:layout_width="match_parent" 
+                android:layout_height="wrap_content" 
+                android:backgroundTint="@color/colorBtn" 
+                app:tabGravity="fill" 
+                app:tabIndicatorColor="@android:color/white"
+                app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
+                app:tabSelectedTextColor="@color/blanco"
+                app:tabTextColor="@color/blanco"
+            />
+				
+        </com.google.android.material.appbar.AppBarLayout>
+		
+        <androidx.viewpager.widget.ViewPager 
+			android:id="@+id/viewpager" 
+			android:layout_width="match_parent" 
+			android:layout_height="match_parent">
+			
+            <LinearLayout 
+				android:id="@+id/tab1" 
+				android:layout_width="match_parent" 
+				android:layout_height="match_parent">
+				
+                <include layout="@layout/activity_main"/>
+				
+            </LinearLayout>
+			
+            <LinearLayout 
+				android:id="@+id/tab2" 
+				android:layout_width="match_parent" 
+				android:layout_height="match_parent">
+				
+                <include 
+					layout="@layout/activity_logs"/>
+					
+            </LinearLayout>
+            
+            <LinearLayout 
+				android:id="@+id/tab3" 
+				android:layout_width="match_parent" 
+				android:layout_height="match_parent">
+				
+                <include 
+					layout="@layout/activity_tools"/>
+					
+            </LinearLayout>
+			
+        </androidx.viewpager.widget.ViewPager>
+		
+    </LinearLayout>
+	
+    <com.google.android.material.navigation.NavigationView 
+		android:layout_gravity="start" 
+		android:id="@+id/drawerNavigationView" 
+		android:fitsSystemWindows="true" 
+		android:layout_width="wrap_content" 
+		android:layout_height="match_parent" 
+		app:headerLayout="@layout/nav_header" 
+		app:menu="@menu/navigation_menu"/>
+		
+</androidx.drawerlayout.widget.DrawerLayout>

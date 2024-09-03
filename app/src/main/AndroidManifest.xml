@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.elcris.coservers">
+    <!-- Full network access -->
+
+    <uses-sdk android:minSdkVersion="21" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- View network connections -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- Modify or delete the contents of your SD card -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- Read the contents of your SD card -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- Control vibration -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.NEARBY_WIFI_DEVICES"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.POWER_SERVICE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:extractNativeLibs="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:requestLegacyExternalStorage="true"
+        android:resizeableActivity="true"
+        android:theme="@style/AppTheme">
+        <activity android:exported="true"
+            android:label="Importar Configuracion"
+            android:screenOrientation="portrait"
+            android:name="com.elcris.coservers.activities.ConfigImportOnlineActivity">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="elcris.coservers.com" android:scheme="http"/>
+                <data android:host="elcris.coservers.com" android:scheme="https"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.elcris.coservers.activities.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:exported="true"
+            android:name="com.elcris.coservers.MainActivity"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="com.elcris.coservers.activities.ConfigGeralActivity"
+            android:label="@string/settings"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.elcris.coservers.MainActivity" />
+        <activity
+            android:name="com.elcris.coservers.activities.ConfigImportFileActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:grantUriPermissions="true"
+            android:label="@string/settings_export"
+            android:parentActivityName="com.elcris.coservers.MainActivity">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:mimeType="application/octet-stream" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:mimeType="application/x-co-config" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <data android:mimeType="application/co" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="*/*" />
+                <data android:scheme="file" />
+                <data android:scheme="content" />
+                <data android:host="*" />
+                <data android:pathPattern=".*.mx" />
+                <data android:pathPattern=".*.mx" />
+                <data android:pathPattern=".*..*.mx" />
+                <data android:pathPattern=".*..*.mx" />
+                <data android:pathPattern=".*..*..*.mx" />
+                <data android:pathPattern=".*..*..*.mx" />
+                <data
+                    android:pathPattern=".*..*..*..*.mx" />
+                <data
+                    android:pathPattern=".*..*..*..*.mx" />
+                <data
+                    android:pathPattern=".*..*..*..*..*.mx" />
+                <data
+                    android:pathPattern=".*..*..*..*..*.mx" />
+                <data
+                    android:pathPattern=".*..*..*..*..*..*.mx" />
+                <data
+                    android:pathPattern=".*..*..*..*..*..*.mx" />
+                <data
+                    android:pathPattern=".*..*..*..*..*..*..*.mx" />
+                <data
+                    android:pathPattern=".*..*..*..*..*..*..*.mx" />
+                <data
+                    android:pathPattern=".*..*..*..*..*..*..*..*.mx" />
+                <data
+                    android:pathPattern=".*..*..*..*..*..*..*..*.mx" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.elcris.coservers.LaunchVpn"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:label="@string/app_name" /> <!-- - Receivers -->
+        <receiver
+            android:name="com.elcris.coservers.core.MainReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.elcris.coservers.core.MainReceiver.ACTION_SERVICE_STOP" />
+                <action android:name="com.elcris.coservers.core.MainReceiver.ACTION_SERVICE_RESTART" />
+            </intent-filter>
+        </receiver> <!-- - Services -->
+        <receiver
+            android:name="me.dawson.proxyserver.ui.WiFiDirectBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true"
+            tools:ignore="Instantiatable"></receiver>
+        <service
+            android:screenOrientation="portrait"
+            android:name="com.elcris.coservers.tunnel.vpn.TunnelVpnService"
+            android:enabled="true"
+            android:exported="false"
+            android:permission="android.permission.BIND_VPN_SERVICE">
+            <intent-filter>
+                <action android:name="android.net.VpnService" />
+            </intent-filter>
+        </service>
+        <service android:name="me.dawson.proxyserver.ui.ProxyService" />
+        <service
+            android:name="com.elcris.coservers.service.SocksDNSService"
+            android:exported="false" />
+
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.elcris.coservers.activities.ConfigExportFileActivity"
+            android:label="@string/settings_import"
+            android:parentActivityName="com.elcris.coservers.MainActivity" />
+        <activity
+            android:screenOrientation="portrait"
+            android:name="me.dawson.proxyserver.ui.ProxySettings"
+            android:label="Compartir Internet"
+            android:parentActivityName="com.elcris.coservers.MainActivity" />
+
+        <activity
+            android:name="com.elcris.coservers.SpeedTestActivity"
+            android:screenOrientation="portrait"
+            android:label="Speed Test"/>
+
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.elcris.coservers.activities.ExceptionActivity"
+            android:label="Application Error" />
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.elcris.coservers.TunnelActivity"
+            android:label="Tipo de Túnel"
+            android:parentActivityName="com.elcris.coservers.MainActivity" />
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.elcris.coservers.activities.AboutActivity"
+            android:label="Acerca del desarrollador"
+            android:parentActivityName="com.elcris.coservers.MainActivity" />
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.elcris.coservers.activities.LicenseActivity"
+            android:label="License"
+            android:parentActivityName="com.elcris.coservers.activities.AboutActivity" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APLICATION_ID"
+            android:value="ca-app-pub-6741116462771721~3564413635" /> <!-- - FAKE -->
+        <meta-data
+            android:name="com.google.androiid.gms.ads.AD_MANAGER_APP"
+            android:value="true" /><!-- - FAKE -->
+
+
+        <meta-data
+            android:name="@string/mconfig1"
+            android:value="@string/mconfig2" /> <!-- - REAL -->
+        <meta-data
+            android:name="@string/mconfig3"
+            android:value="true" /><!-- - REAL -->
+    </application>
+
+</manifest>
