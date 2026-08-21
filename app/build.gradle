@@ -5,30 +5,99 @@ plugins {
 
 android {
     namespace 'com.elcris.coservers'
-    compileSdk 32
+    compileSdk 36
     //buildToolsVersion "33.0.0"
 
     defaultConfig {
         applicationId "com.elcris.coservers"
         minSdk 21
-        targetSdk 32
+        targetSdk 36
         versionCode 1
         versionName "1.0"
-    }
-
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
+		ndk {
+            abiFilters 'arm64-v8a', 'armeabi-v7a'
+		}
     }
     
     compileOptions {
-		sourceCompatibility JavaVersion.VERSION_11
-		targetCompatibility JavaVersion.VERSION_11
-	}
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+	
+	signingConfigs {
+        release {
+            storeFile file("ndevz.keystore")
+            storePassword 'ndevz'
+            keyAlias 'ndevz'
+            keyPassword 'ndevz'
+            v1SigningEnabled true
+            v2SigningEnabled true
+            enableV3Signing true
+        }
+		debug {
+			storeFile file("ndevz.keystore")
+            storePassword 'ndevz'
+            keyAlias 'ndevz'
+            keyPassword 'ndevz'
+            v1SigningEnabled true
+            v2SigningEnabled true
+            enableV3Signing true
+		}
+    }
+	
+	buildTypes {
+        release {
+            minifyEnabled true
+			shrinkResources true
+			debuggable false
+			signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+		debug {
+			minifyEnabled false
+			shrinkResources false
+			debuggable true
+			signingConfig signingConfigs.debug
+			proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+		}
+    }
+    
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'arm64-v8a', 'armeabi-v7a'
+            universalApk true
+        }
+    }
+	
     lintOptions {
         checkReleaseBuilds false
+    }
+	
+	buildFeatures {
+        viewBinding true
+        buildConfig true
+    }
+	packagingOptions {
+        resources {
+            excludes += [
+                'META-INF/*.kotlin_module',
+                'META-INF/DEPENDENCIES',
+                'META-INF/LICENSE',
+                'META-INF/LICENSE.txt',
+                'META-INF/NOTICE',
+                'META-INF/NOTICE.txt',
+                '**/*.kotlin_builtins',
+                '**/*.kotlin_metadata',
+            ]
+        }
+		jniLibs {
+            excludes += [
+                '**/x86/**',
+                '**/x86_64/**'
+            ]
+        }
     }
 	
 	/**buildFeatures {
